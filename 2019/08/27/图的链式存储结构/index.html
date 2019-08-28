@@ -16,14 +16,14 @@
 <meta property="og:site_name" content="Viva La Vida">
 <meta property="og:description" content="邻接表1.为什么要使用邻接表因为当一个图为稀疏矩阵的时候，使用邻接矩阵会大量浪费空间图的邻接表法结合了顺序存储（顶点表）和链式存储（边表），大大减少了不必要的空间浪费，同时也很容易找到顶点的所有临边，而对于邻接矩阵则需遍历全图。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/2019/08/27/图的链式存储结构/image/linjiebiao/1.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/08/27/图的链式存储结构/image/linjiebiao/2.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/08/27/图的链式存储结构/image/linjiebiao/3.jpg">
-<meta property="og:updated_time" content="2019-08-27T17:36:15.666Z">
+<meta property="og:image" content="http://yoursite.com/2019/08/27/图的链式存储结构/%E2%80%AA../image/linjiebiao/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/08/27/image/linjiebiao/2.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/08/27/image/linjiebiao/3.jpg">
+<meta property="og:updated_time" content="2019-08-28T08:45:14.371Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图的链式存储结构">
 <meta name="twitter:description" content="邻接表1.为什么要使用邻接表因为当一个图为稀疏矩阵的时候，使用邻接矩阵会大量浪费空间图的邻接表法结合了顺序存储（顶点表）和链式存储（边表），大大减少了不必要的空间浪费，同时也很容易找到顶点的所有临边，而对于邻接矩阵则需遍历全图。">
-<meta name="twitter:image" content="http://yoursite.com/2019/08/27/图的链式存储结构/image/linjiebiao/1.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/27/图的链式存储结构/%E2%80%AA../image/linjiebiao/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Viva La Vida" type="application/atom+xml">
   
@@ -181,7 +181,7 @@
       
         <h1 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h1><h2 id="1-为什么要使用邻接表"><a href="#1-为什么要使用邻接表" class="headerlink" title="1.为什么要使用邻接表"></a>1.为什么要使用邻接表</h2><p>因为当一个图为稀疏矩阵的时候，使用邻接矩阵会<em>大量浪费空间</em><br>图的邻接表法结合了<strong>顺序存储</strong>（顶点表）和<strong>链式存储</strong>（边表），大大<em>减少了不必要的空间浪费</em>，同时也很<em>容易找到顶点的所有临边</em>，而对于邻接矩阵则需遍历全图。</p>
 <a id="more"></a>
-<h2 id="2-邻接表的构成"><a href="#2-邻接表的构成" class="headerlink" title="2.邻接表的构成"></a>2.邻接表的构成</h2><p>对每个<strong>顶点</strong>建立一个单链表<br>由此该存储结构由<strong>顶点表</strong>与<strong>边表</strong>组成<br><img src="./image/linjiebiao/1.jpg" alt="顶点表和边表节点结构"><br>图的邻接表<strong>存储结构</strong>如下:  </p>
+<h2 id="2-邻接表的构成"><a href="#2-邻接表的构成" class="headerlink" title="2.邻接表的构成"></a>2.邻接表的构成</h2><p>对每个<strong>顶点</strong>建立一个单链表<br>由此该存储结构由<strong>顶点表</strong>与<strong>边表</strong>组成<br><img src="%E2%80%AA../image/linjiebiao/1.jpg" alt="顶点表和边表节点结构"><br>图的邻接表<strong>存储结构</strong>如下:  </p>
 <pre><code>#define MaxVertexNum 100 //图中顶点数目最大值
 typedef struct VNode            //顶点表节点
 {
@@ -196,9 +196,9 @@ typedef struct{                 //邻接表
     AdjList vertices;
     int vexnum,arcnum;          //图的顶点数和弧数
 }ALGraph;</code></pre><p>如上图所示：<br><strong>顶点域</strong>存放的是顶点的信息；<br><strong>边表头指针</strong>指向的是第一条邻接边；<br>而边表里的<strong>邻接点域</strong>存放的是该弧指向的顶点位置（也就是与顶点相连接的那一点）<br><strong>指针域</strong>指向的是与顶点相连另外的一条弧  </p>
-<h2 id="3-无向图的邻接表"><a href="#3-无向图的邻接表" class="headerlink" title="3.无向图的邻接表"></a>3.无向图的邻接表</h2><p><img src="./image/linjiebiao/2.jpg" alt="无向图"><br>如上图所示：<br>该无向图共有五个顶点，因此需要五个顶点表 1，2，3，4，5<br>以第一个顶点为例 1号顶点指向通往2号顶点的弧，该弧邻接点域保存着这弧另一端顶点的号码2号。同时指针域又指向了1号顶点与5号顶点的弧，此弧邻接点域保存着号码5，又因为1号顶点已经不再与任何顶点相连，因此指针域指向NULL；  </p>
+<h2 id="3-无向图的邻接表"><a href="#3-无向图的邻接表" class="headerlink" title="3.无向图的邻接表"></a>3.无向图的邻接表</h2><p><img src="../image/linjiebiao/2.jpg" alt="无向图"><br>如上图所示：<br>该无向图共有五个顶点，因此需要五个顶点表 1，2，3，4，5<br>以第一个顶点为例 1号顶点指向通往2号顶点的弧，该弧邻接点域保存着这弧另一端顶点的号码2号。同时指针域又指向了1号顶点与5号顶点的弧，此弧邻接点域保存着号码5，又因为1号顶点已经不再与任何顶点相连，因此指针域指向NULL；  </p>
 <p>因为无向图要指向每个相邻的弧，因此每个弧都会相对应两个顶点<br>所以<strong>无向图的存储空间为</strong>O(V+2E)<br>v是顶点个数 E是边数</p>
-<h2 id="4-有向图的邻接表"><a href="#4-有向图的邻接表" class="headerlink" title="4.有向图的邻接表"></a>4.有向图的邻接表</h2><p><img src="./image/linjiebiao/3.jpg" alt="有向图"><br>如上图所示：<br>与无向图不同的是有向图只指向出度，因此<strong>有向图的存储空间</strong>为O(V+E)  </p>
+<h2 id="4-有向图的邻接表"><a href="#4-有向图的邻接表" class="headerlink" title="4.有向图的邻接表"></a>4.有向图的邻接表</h2><p><img src="../image/linjiebiao/3.jpg" alt="有向图"><br>如上图所示：<br>与无向图不同的是有向图只指向出度，因此<strong>有向图的存储空间</strong>为O(V+E)  </p>
 <p>但同时不好的地方在于由于有向图只指向出度弧，因此很难计算顶点的度。<br>计算有向图的度 同时需要构造<strong>逆邻接表</strong></p>
 
       
@@ -303,6 +303,15 @@ typedef struct{                 //邻接表
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/08/28/图的基础知识/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          图的基础知识
+        
+      </div>
+    </a>
   
   
     <a href="/2019/08/27/Markdown-的书写格式/" id="article-nav-older" class="article-nav-link-wrap">
@@ -461,11 +470,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">English learning</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color2">English learning</a>
               </li>
             
             <div class="clearfix"></div>
