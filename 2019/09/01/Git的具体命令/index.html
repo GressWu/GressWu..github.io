@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | Viva La Vida</title>
+  <title>Git的具体命令 | Viva La Vida</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Viva La Vida">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="创建一个文件夹，并在文件夹中新建一个文件mkdir GitTest(创建文件夹GitTest) cd GitTest(进入GitTest文件夹) touch first.md (创建first.md文件)">
+<meta name="keywords" content="Git与Github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git的具体命令">
+<meta property="og:url" content="http://yoursite.com/2019/09/01/Git的具体命令/index.html">
 <meta property="og:site_name" content="Viva La Vida">
+<meta property="og:description" content="创建一个文件夹，并在文件夹中新建一个文件mkdir GitTest(创建文件夹GitTest) cd GitTest(进入GitTest文件夹) touch first.md (创建first.md文件)">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-31T17:20:28.946Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Viva La Vida">
+<meta name="twitter:title" content="Git的具体命令">
+<meta name="twitter:description" content="创建一个文件夹，并在文件夹中新建一个文件mkdir GitTest(创建文件夹GitTest) cd GitTest(进入GitTest文件夹) touch first.md (创建first.md文件)">
   
     <link rel="alternative" href="/atom.xml" title="Viva La Vida" type="application/atom+xml">
   
@@ -150,36 +155,64 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Git的具体命令" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Git的具体命令
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/01/Git的具体命令/" class="archive-article-date">
+
+        
+        <a href="/2019/09/01/Git的具体命令/" class="archive-article-date">
   	<time datetime="2019-08-31T16:53:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/01/Git的具体命令/">Git的具体命令</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="创建一个文件夹，并在文件夹中新建一个文件"><a href="#创建一个文件夹，并在文件夹中新建一个文件" class="headerlink" title="创建一个文件夹，并在文件夹中新建一个文件"></a>创建一个文件夹，并在文件夹中新建一个文件</h2><pre><code>mkdir GitTest(创建文件夹GitTest)
+cd GitTest(进入GitTest文件夹)
+touch first.md (创建first.md文件)</code></pre><a id="more"></a>
+<h2 id="git-status命令"><a href="#git-status命令" class="headerlink" title="git status命令"></a>git status命令</h2><p>这个命令顾名思义就是查看状态，这个命令可以算是使用<strong>最频繁</strong>的一个命令了，建议大家没事就输入下这个命令，来查看你当前git仓库的一些状态。</p>
+<h2 id="git-init命令"><a href="#git-init命令" class="headerlink" title="git init命令"></a>git init命令</h2><p>将文件夹first.md初始化为一个git仓库。</p>
+<h2 id="git-add命令"><a href="#git-add命令" class="headerlink" title="git add命令"></a>git add命令</h2><p>用 git init初始化仓库后，并没有将first.md文件提交到仓库。<br>我们先编辑一下 first.md文件，然后输入git add first.md<br>此时first.md文件进入缓冲区，等待被提交。<br>我们可以输入 git rm –cached命令移除该缓存。</p>
+<h2 id="git-commit命令"><a href="#git-commit命令" class="headerlink" title="git commit命令"></a>git commit命令</h2><p>接着我们输入git    commit -m ‘first    commit’    这个命令什么意思呢？commit是提交的意思，m代表是提交信息，执行了以上命令代表我们已经正式进行了第一次提交。<br>这个时候再输入git    status会提示nothing    to    commit。</p>
+<h2 id="git-log命令"><a href="#git-log命令" class="headerlink" title="git log命令"></a>git log命令</h2><p>git    log    命令可以查看所有产生的commit记录，所以可以看到已经产生了一条commit记录，而提交时候的附带信息叫’first commit’。</p>
+<h2 id="git-add与-git-commit"><a href="#git-add与-git-commit" class="headerlink" title="git add与 git commit"></a>git add与 git commit</h2><p>看到这里估计很多人会有疑问，我想要提交直接进行commit不就行了么，为什么先要再add一次呢？首先git    add    是先把改动添加到一个「暂存区」，你可以理解成是一个缓存区域，临时保存你的改动,而    git    commit才是最后真正的提交。这样做的好处就是防止误提交。</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,350 +224,126 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/01/Git的具体命令/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/01/初识Git/" class="archive-article-date">
-  	<time datetime="2019-08-31T16:09:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/01/初识Git/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">初识Git与GitHub</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/01/初识Git/">初识Git与GitHub</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Git的具体命令" data-title="Git的具体命令" data-url="http://yoursite.com/2019/09/01/Git的具体命令/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Git与Github</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/30/图的应用——路径/" class="archive-article-date">
-  	<time datetime="2019-08-30T07:54:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/30/图的应用——路径/">图的应用——路径</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/29/最小生成树/" class="archive-article-date">
-  	<time datetime="2019-08-29T11:22:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/29/最小生成树/">最小生成树</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/29/Markdown-的数学公式应用/" class="archive-article-date">
-  	<time datetime="2019-08-28T16:28:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/29/Markdown-的数学公式应用/">Markdown 的数学公式应用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Markdown的使用方法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/28/图的基础知识/" class="archive-article-date">
-  	<time datetime="2019-08-28T08:35:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/28/图的基础知识/">图的基础知识</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/27/图的链式存储结构/" class="archive-article-date">
-  	<time datetime="2019-08-27T15:08:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/27/图的链式存储结构/">图的链式存储结构</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/27/Markdown-的书写格式/" class="archive-article-date">
-  	<time datetime="2019-08-27T12:01:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/27/Markdown-的书写格式/">Markdown 基础使用方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Markdown的使用方法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/27/Words/" class="archive-article-date">
-  	<time datetime="2019-08-27T02:06:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/27/Words/">Words</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">English learning</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/27/hello-world/" class="archive-article-date">
-  	<time datetime="2019-08-26T16:45:38.666Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/27/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -557,8 +366,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
