@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/08/27/图的链式存储结构/%E2%80%AA../image/linjiebiao/1.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/08/27/image/linjiebiao/2.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/08/27/image/linjiebiao/3.jpg">
-<meta property="og:updated_time" content="2019-08-28T16:28:42.347Z">
+<meta property="og:updated_time" content="2019-08-31T17:37:29.763Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图的链式存储结构">
 <meta name="twitter:description" content="邻接表1.为什么要使用邻接表因为当一个图为稀疏矩阵的时候，使用邻接矩阵会大量浪费空间图的邻接表法结合了顺序存储（顶点表）和链式存储（边表），大大减少了不必要的空间浪费，同时也很容易找到顶点的所有临边，而对于邻接矩阵则需遍历全图。">
@@ -181,6 +181,8 @@
       
         <h1 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h1><h2 id="1-为什么要使用邻接表"><a href="#1-为什么要使用邻接表" class="headerlink" title="1.为什么要使用邻接表"></a>1.为什么要使用邻接表</h2><p>因为当一个图为稀疏矩阵的时候，使用邻接矩阵会<em>大量浪费空间</em><br>图的邻接表法结合了<strong>顺序存储</strong>（顶点表）和<strong>链式存储</strong>（边表），大大<em>减少了不必要的空间浪费</em>，同时也很<em>容易找到顶点的所有临边</em>，而对于邻接矩阵则需遍历全图。</p>
 <a id="more"></a>
+
+
 <h2 id="2-邻接表的构成"><a href="#2-邻接表的构成" class="headerlink" title="2.邻接表的构成"></a>2.邻接表的构成</h2><p>对每个<strong>顶点</strong>建立一个单链表<br>由此该存储结构由<strong>顶点表</strong>与<strong>边表</strong>组成<br><img src="%E2%80%AA../image/linjiebiao/1.jpg" alt="顶点表和边表节点结构"><br>图的邻接表<strong>存储结构</strong>如下:  </p>
 <pre><code>#define MaxVertexNum 100 //图中顶点数目最大值
 typedef struct VNode            //顶点表节点
