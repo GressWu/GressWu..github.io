@@ -6,20 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>图的应用——拓扑排序与关键路径 | Viva La Vida</title>
+  <title>图的应用——路径 | Viva La Vida</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="有向无环图定义：一个无环的有向图，简称DAG图。可以有多个前驱，只要不产生环即可。应用：他是描述一项工程或系统进行过程的有效工具。一个工程可以分为若干子工程，只要完成了这些子工程，就可以导致整个工程的完成。目标与关心的问题：   工程是否顺利的进行 整个工程完成所必须的最短时间">
+  <meta name="description" content="最短路径最短路径：寻找起点到终点路径权值和最短的那个路径 典型应用于解决交通问题首先交通网络是用有向网来表示的 （比如有逆水，顺水的速度差异）顶点：表示地点弧：表示两个地点有路连通权值：可以表示两地之间的距离，时间。。。源点：路径上的第一个顶点终点：路径上的最后一个顶点    单源最短路径目标：求一个顶点到其他顶点的最短路径。Dijkstra（迪杰斯特拉算法）首先分为两个集合 A，BA集合存放起始">
 <meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="图的应用——拓扑排序与关键路径">
-<meta property="og:url" content="http://yoursite.com/2019/09/01/图的应用——拓扑排序/index.html">
+<meta property="og:title" content="图的应用——路径">
+<meta property="og:url" content="http://yoursite.com/2019/08/30/图的应用——最短路径/index.html">
 <meta property="og:site_name" content="Viva La Vida">
-<meta property="og:description" content="有向无环图定义：一个无环的有向图，简称DAG图。可以有多个前驱，只要不产生环即可。应用：他是描述一项工程或系统进行过程的有效工具。一个工程可以分为若干子工程，只要完成了这些子工程，就可以导致整个工程的完成。目标与关心的问题：   工程是否顺利的进行 整个工程完成所必须的最短时间">
+<meta property="og:description" content="最短路径最短路径：寻找起点到终点路径权值和最短的那个路径 典型应用于解决交通问题首先交通网络是用有向网来表示的 （比如有逆水，顺水的速度差异）顶点：表示地点弧：表示两个地点有路连通权值：可以表示两地之间的距离，时间。。。源点：路径上的第一个顶点终点：路径上的最后一个顶点    单源最短路径目标：求一个顶点到其他顶点的最短路径。Dijkstra（迪杰斯特拉算法）首先分为两个集合 A，BA集合存放起始">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-01T13:23:07.211Z">
+<meta property="og:image" content="http://yoursite.com/2019/08/30/image/zuixiaolujing/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/08/30/image/zuixiaolujing/2.jpg">
+<meta property="og:updated_time" content="2019-09-02T07:34:23.257Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="图的应用——拓扑排序与关键路径">
-<meta name="twitter:description" content="有向无环图定义：一个无环的有向图，简称DAG图。可以有多个前驱，只要不产生环即可。应用：他是描述一项工程或系统进行过程的有效工具。一个工程可以分为若干子工程，只要完成了这些子工程，就可以导致整个工程的完成。目标与关心的问题：   工程是否顺利的进行 整个工程完成所必须的最短时间">
+<meta name="twitter:title" content="图的应用——路径">
+<meta name="twitter:description" content="最短路径最短路径：寻找起点到终点路径权值和最短的那个路径 典型应用于解决交通问题首先交通网络是用有向网来表示的 （比如有逆水，顺水的速度差异）顶点：表示地点弧：表示两个地点有路连通权值：可以表示两地之间的距离，时间。。。源点：路径上的第一个顶点终点：路径上的最后一个顶点    单源最短路径目标：求一个顶点到其他顶点的最短路径。Dijkstra（迪杰斯特拉算法）首先分为两个集合 A，BA集合存放起始">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/30/image/zuixiaolujing/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Viva La Vida" type="application/atom+xml">
   
@@ -155,57 +158,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-图的应用——拓扑排序" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-图的应用——最短路径" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      图的应用——拓扑排序与关键路径
+      图的应用——路径
     </h1>
   
 
         
-        <a href="/2019/09/01/图的应用——拓扑排序/" class="archive-article-date">
-  	<time datetime="2019-09-01T09:33:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
+        <a href="/2019/08/30/图的应用——最短路径/" class="archive-article-date">
+  	<time datetime="2019-08-30T07:54:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="有向无环图"><a href="#有向无环图" class="headerlink" title="有向无环图"></a>有向无环图</h1><p>定义：一个无环的有向图，简称DAG图。可以有多个前驱，只要不产生环即可。<br>应用：他是描述一项工程或系统进行过程的有效工具。一个工程可以分为若干子工程，只要完成了这些子工程，就可以导致整个工程的完成。<br>目标与关心的问题： </p>
-<ul>
-<li>工程是否顺利的进行</li>
-<li>整个工程完成所必须的最短时间  <a id="more"></a>
-描述方法：<br>用一个<strong>有向图</strong>表示一个工程的各子工程及其制约关系    </li>
-</ul>
-<ol>
-<li>AOV网：<br>以<strong>顶点</strong>表示活动，<strong>弧</strong>表示活动之间的优先制约关系。这种有向图为顶点表示活动的网。    </li>
-</ol>
-<p><strong>特点</strong>：    </p>
-<ul>
-<li>若从i道具j有一条有向路径，则i是j的前驱；j是i的后继。  </li>
-<li>若&lt;i,j&gt;是网中有向边，则i是j的直接前驱;j是i的直接后继。</li>
-<li>AOV网不允许出现环。</li>
-</ul>
-<ol start="2">
-<li>AOE网：<br>以<strong>弧</strong>表示活动，以<strong>顶点</strong>表示活动的开始或结束。这种有向图为边表示活动的网。权表示活动的持续时间。通常AOE网可用来<em>估算工程的完成时间*</em>。     </li>
-</ol>
-<h2 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h2><p>定义：由某个集合上的偏序得到该集合上的一个全序，此操作叫做拓扑排序。   </p>
-<h3 id="在AOV网中"><a href="#在AOV网中" class="headerlink" title="在AOV网中"></a>在AOV网中</h3><p>目的：检测网中是否存在着环<br><strong>拓扑排序</strong>:在AOV网没有回路的前提下，将全部活动排列成一个线性序列，要着重注意<strong>使得若AOV网中一定有弧&lt;i,j&gt;存在，则在这个序列中，i一定排在j的前面</strong>。这种性质的序列称之为<strong>拓扑有序序列</strong>(线性的)，相应的拓扑有序算法叫拓扑排序。<br>注：拓扑排序序列不唯一。<br>检测AOV网是否存在环的方法：对<strong>有向图</strong>构造其顶点的拓扑有序序列，若网中所有顶点均在他的拓扑有序序列中，则AOV网必定<strong>不存在环</strong>。  </p>
-<h2 id="关键路径"><a href="#关键路径" class="headerlink" title="关键路径"></a>关键路径</h2><p>定义：路径长度最长的路径</p>
-<h3 id="在AOE网中"><a href="#在AOE网中" class="headerlink" title="在AOE网中"></a>在AOE网中</h3><p>V（顶点）代表事件，如开始结束 a（边）代表活动<br><strong>目的</strong>：</p>
-<ul>
-<li>完成整项工程至少需要多少时间？ —&gt;关键路径长度     </li>
-<li>哪些活动是影响工程进度的关键？</li>
-<li><em>路径长度*</em>：路径各活动持续时间之和。    </li>
-</ul>
-<p><strong>ve(vj)</strong>:表示事件vj的最早发生时间。从v1到vj的最长路径长度。<br><strong>vl(vj)</strong>:表示事件vj的最迟发生时间。到最后一个事件发生的最长时间-到该事件的长度<br><strong>e(i)</strong>:表示活动的最早开始时间。<br><strong>l(i)</strong>:表示活动的最迟开始时间。<br><strong>l(i)-e(i)</strong>:活动ai的时间余量。<br><strong>关键活动</strong>：关键路径上的所有活动叫关键活动，l(i)=e(i)的活动叫关键活动。<br><strong>如何计算以上的值</strong>:  </p>
-<blockquote>
-<p>设活动ai用弧&lt;j,k&gt;表示，持续时间为W(j,k)。<br>图： j—-ai—-&gt;k<br>则有:<br>(1) e(i)=ve(j)<br>(2) l(i)=vl(k)-W(j,k)</p>
-</blockquote>
+        <h1 id="最短路径"><a href="#最短路径" class="headerlink" title="最短路径"></a>最短路径</h1><p>最短路径：寻找起点到终点路径<strong>权值和</strong>最短的那个路径 典型应用于解决交通问题<br>首先交通网络是用<strong>有向网</strong>来表示的 （比如有逆水，顺水的速度差异）<br>顶点：表示地点<br>弧：表示两个地点有路连通<br>权值：可以表示两地之间的距离，时间。。。<br>源点：路径上的第一个顶点<br>终点：路径上的最后一个顶点   </p>
+<h2 id="单源最短路径"><a href="#单源最短路径" class="headerlink" title="单源最短路径"></a>单源最短路径</h2><p><strong>目标</strong>：求一个顶点到其他顶点的最短路径。<br>Dijkstra（迪杰斯特拉算法）<br>首先分为两个集合 A，B<br>A集合存放起始顶点与找到最短路径的顶点（初始状态只存放起始顶点）<br>B集合存放剩下的顶点<br><strong>第一步</strong> 初始化<br>将A集合与直接能连接到点的权数记录下来，如果不能直接连接则将权数设置为无穷。<br><strong>第二步</strong> 比较<br>找出第一步权数最小的点 该权数则为A集合到该点的最小路径长度，该点也顺利找到最短路径。<br><strong>第三步</strong> 调整<br>将第二步找到的点从B集合中删除 ，并加入A集合。<br><strong>第四步</strong> 重复前三步直到所有顶点都已经找到了最短路径。<br>例如：<br><img src="../image/zuixiaolujing/1.jpg" alt="Dijkstra算法例子">;</p>
+<h2 id="每一对顶点之间的最短路径"><a href="#每一对顶点之间的最短路径" class="headerlink" title="每一对顶点之间的最短路径"></a>每一对顶点之间的最短路径</h2><p><strong>方法一</strong>：每次以一个顶点为源点，重复执行Dijkstra算法n次 复杂度(n^3)。<br><strong>方法二</strong>：弗洛依德(Floyd)算法  复杂度(n^3)。<br>弗洛伊德算法步骤：<br><strong>第一步</strong> 初始化<br>初始设置一个N阶方阵，另对角线元素为0（也就是说自身到自身权值为零，和图的数组表示法类似），如两点存在弧，则对应元素为权值，否则为无穷。<br><strong>第二步</strong> 逐步尝试在原直接路径中增加<strong>中间顶点</strong> ，若加入中间顶点路径变短，则修改，否则维持原值。<br><strong>第三步</strong> 重复前两步，直到所有顶点试探完毕。<br>例如：<br><img src="../image/zuixiaolujing/2.jpg" alt="Floyd算法例子">;</p>
 
       
 
@@ -296,7 +271,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/01/图的应用——拓扑排序/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/30/图的应用——最短路径/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -310,18 +285,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/01/向GitHub提交代码/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/09/01/初识Git/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          向GitHub提交代码
+          初识Git与GitHub
         
       </div>
     </a>
   
   
-    <a href="/2019/09/01/Git的具体命令/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Git的具体命令</div>
+    <a href="/2019/08/29/最小生成树/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">最小生成树</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -349,7 +324,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="图的应用——拓扑排序" data-title="图的应用——拓扑排序与关键路径" data-url="http://yoursite.com/2019/09/01/图的应用——拓扑排序/"></div>
+	<div class="ds-thread" data-thread-key="图的应用——最短路径" data-title="图的应用——路径" data-url="http://yoursite.com/2019/08/30/图的应用——最短路径/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -481,6 +456,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">政治</a>
               </li>
              
               <li class="article-tag-list-item">
