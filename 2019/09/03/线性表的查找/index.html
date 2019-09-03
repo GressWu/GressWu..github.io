@@ -8,15 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>线性表的查找 | Viva La Vida</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="数据结构">
+  <meta name="description" content="顺序查找（线性查找）应用范围 顺序表或线性链表表示的静态查找表   表内元素之间是无序的     数据结构表示：    typedef struct //查找表的数据结构 {     ElemType *elem;     //元素存储空间基址  &amp;lt;0号单元留空&amp;gt;     int TableLen; //该查找表的长度 }SSTable; int Search_Seq(SSTable">
+<meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性表的查找">
 <meta property="og:url" content="http://yoursite.com/2019/09/03/线性表的查找/index.html">
 <meta property="og:site_name" content="Viva La Vida">
+<meta property="og:description" content="顺序查找（线性查找）应用范围 顺序表或线性链表表示的静态查找表   表内元素之间是无序的     数据结构表示：    typedef struct //查找表的数据结构 {     ElemType *elem;     //元素存储空间基址  &amp;lt;0号单元留空&amp;gt;     int TableLen; //该查找表的长度 }SSTable; int Search_Seq(SSTable">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-03T07:59:07.670Z">
+<meta property="og:updated_time" content="2019-09-03T08:52:01.729Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性表的查找">
+<meta name="twitter:description" content="顺序查找（线性查找）应用范围 顺序表或线性链表表示的静态查找表   表内元素之间是无序的     数据结构表示：    typedef struct //查找表的数据结构 {     ElemType *elem;     //元素存储空间基址  &amp;lt;0号单元留空&amp;gt;     int TableLen; //该查找表的长度 }SSTable; int Search_Seq(SSTable">
   
     <link rel="alternative" href="/atom.xml" title="Viva La Vida" type="application/atom+xml">
   
@@ -172,7 +175,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="顺序查找（线性查找）"><a href="#顺序查找（线性查找）" class="headerlink" title="顺序查找（线性查找）"></a>顺序查找（线性查找）</h1><h2 id="应用范围"><a href="#应用范围" class="headerlink" title="应用范围"></a>应用范围</h2><ol>
+<li>顺序表或线性链表表示的<strong>静态查找表</strong>  </li>
+<li>表内元素之间是<strong>无序</strong>的   </li>
+</ol>
+<p>数据结构表示：   </p>
+<pre><code>typedef struct //查找表的数据结构
+{
+    ElemType *elem;     //元素存储空间基址  &lt;0号单元留空&gt;
+    int TableLen; //该查找表的长度
+}SSTable;
+int Search_Seq(SSTable ST,Elemtype key) //找关键字key的元素，如果找到就返回key的位置
+{
+    ST.elem[0]=key;  //设置哨兵  哨兵值占据0号单元格，这就是为什么0号单元格留空的原因
+    for(i=ST.TableLen;St.elem[i]!=key;--i)  //从后往前找  --i细节
+    return i;   //若存在就返回位置，不存在返回0退出循环
+}</code></pre><p><strong>引入哨兵的好处</strong>：  </p>
+<ol>
+<li>Search_Seq（）；循环不用再来检查越界，减少了比较次数。</li>
+<li>可以减少很多不必要的判断语句。<br>当ST.length比较大的时候，引入哨兵可以使一次查找所需平均时间减少一半！！<br>🐮🍺   🐮🍺</li>
+</ol>
+
       
 
       
@@ -275,6 +298,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/09/03/图的一些总结/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          图的一些总结
+        
+      </div>
+    </a>
   
   
     <a href="/2019/09/03/查找的基础知识/" id="article-nav-older" class="article-nav-link-wrap">
@@ -429,19 +461,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Git与Github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown的使用方法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color1">Git与Github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">English learning</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -450,6 +478,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">高等数学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">English learning</a>
               </li>
             
             <div class="clearfix"></div>
