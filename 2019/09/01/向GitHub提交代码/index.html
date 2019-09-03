@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>向GitHub提交代码 | Viva La Vida</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="SSHSSH是一种网络协议，用于计算机之间的加密登录。目前是每一台Linux电脑的标准配置。而大多数Git服务器都会选择使用SSH    公钥来进行授权，所以想要在GitHub提交代码的第一步就是要先添加SSH    key    配置。      生成SSH key输入ssh-keygen    -t    rsa，什么意思呢？就是指定rsa算法生成密钥，接着连续三个回车键（不需要输入密码），然">
+  <meta name="description" content="SSHSSH是一种网络协议，用于计算机之间的加密登录。目前是每一台Linux电脑的标准配置。而大多数Git服务器都会选择使用SSH    公钥来进行授权，所以想要在GitHub提交代码的第一步就是要先添加SSH    key    配置。">
 <meta name="keywords" content="Git与Github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="向GitHub提交代码">
 <meta property="og:url" content="http://yoursite.com/2019/09/01/向GitHub提交代码/index.html">
 <meta property="og:site_name" content="Viva La Vida">
-<meta property="og:description" content="SSHSSH是一种网络协议，用于计算机之间的加密登录。目前是每一台Linux电脑的标准配置。而大多数Git服务器都会选择使用SSH    公钥来进行授权，所以想要在GitHub提交代码的第一步就是要先添加SSH    key    配置。      生成SSH key输入ssh-keygen    -t    rsa，什么意思呢？就是指定rsa算法生成密钥，接着连续三个回车键（不需要输入密码），然">
+<meta property="og:description" content="SSHSSH是一种网络协议，用于计算机之间的加密登录。目前是每一台Linux电脑的标准配置。而大多数Git服务器都会选择使用SSH    公钥来进行授权，所以想要在GitHub提交代码的第一步就是要先添加SSH    key    配置。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-03T05:30:17.417Z">
+<meta property="og:updated_time" content="2019-09-03T06:57:27.774Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="向GitHub提交代码">
-<meta name="twitter:description" content="SSHSSH是一种网络协议，用于计算机之间的加密登录。目前是每一台Linux电脑的标准配置。而大多数Git服务器都会选择使用SSH    公钥来进行授权，所以想要在GitHub提交代码的第一步就是要先添加SSH    key    配置。      生成SSH key输入ssh-keygen    -t    rsa，什么意思呢？就是指定rsa算法生成密钥，接着连续三个回车键（不需要输入密码），然">
+<meta name="twitter:description" content="SSHSSH是一种网络协议，用于计算机之间的加密登录。目前是每一台Linux电脑的标准配置。而大多数Git服务器都会选择使用SSH    公钥来进行授权，所以想要在GitHub提交代码的第一步就是要先添加SSH    key    配置。">
   
     <link rel="alternative" href="/atom.xml" title="Viva La Vida" type="application/atom+xml">
   
@@ -175,7 +175,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h2><p>SSH是一种网络协议，用于计算机之间的加密登录。目前是每一台Linux电脑的标准配置。而大多数Git服务器都会选择使用SSH    公钥来进行授权，所以想要在GitHub提交代码的第一步就是要先添加SSH    key    配置。     </p>
+        <h2 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h2><p>SSH是一种网络协议，用于计算机之间的加密登录。目前是每一台Linux电脑的标准配置。而大多数Git服务器都会选择使用SSH    公钥来进行授权，所以想要在GitHub提交代码的第一步就是要先添加SSH    key    配置。    </p>
+<a id="more"></a> 
 <h2 id="生成SSH-key"><a href="#生成SSH-key" class="headerlink" title="生成SSH key"></a>生成SSH key</h2><p>输入<strong>ssh-keygen    -t    rsa</strong>，什么意思呢？就是指定rsa算法生成密钥，接着连续三个回车键（不需要输入密码），然后就会生成两个文件id_rsa和id_rsa.pub，而id_rsa是密钥，id_rsa.pub就是公钥。这两文件默认分别在如下目录里生成：<br>Linux/Mac系统在~/.ssh下，win系统在/c/Documents and Settings/username/.ssh下，都是隐藏文件，相信你们有办法查看的。<br>接下来要做的是把id_rsa.pub的内容添加到GitHub上，这样你本地的id_rsa密钥跟GitHub上的id_rsa.pub公钥进行配对，授权成功才可以提交代码。</p>
 <h2 id="GitHub上添加SSH-key"><a href="#GitHub上添加SSH-key" class="headerlink" title="GitHub上添加SSH key"></a>GitHub上添加SSH key</h2><p>第一步先在GitHub上的设置页面，点击最左侧SSH    and    GPG    keys<br>然后点击右上角的New    SSH    key    按钮<br>需要做的只是在Key那栏把id_rsa.pub公钥文件里的内容复制粘贴进去就可以了（上述示例为了安全粘贴的公钥是无效的），Title    那栏不需要填写，点击Add    SSH    key    按钮就ok了。<br>Windows用户，设置显示隐藏文件，可以使用    EditPlus或者Sublime    打开复制就行了<br>SSH    key    添加成功之后，输入<strong>ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a></strong>进行测试，如果出现以下提示证明添加成功了.<br>Hi username! You’ve successfully authenticated.   </p>
 <h2 id="Push-amp-Pull"><a href="#Push-amp-Pull" class="headerlink" title="Push&amp;Pull"></a>Push&amp;Pull</h2><p>在提交代码之前我们先要了解两个命令，也是上次的文章没有介绍的，因为这两个命令需要 跟远程仓库配合。<br><strong>Push：</strong>直译过来就是「推」的意思，什么意思呢？如果你本地代码有更新了，那么就需要把本地代码推到远程仓库，这样本地仓库跟远程仓库就可以保持同步了。</p>
@@ -448,15 +449,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Git与Github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown的使用方法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">English learning</a>
+                <a href="javascript:void(0)" class="js-tag color1">Git与Github</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -469,6 +466,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">高等数学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">English learning</a>
               </li>
             
             <div class="clearfix"></div>
