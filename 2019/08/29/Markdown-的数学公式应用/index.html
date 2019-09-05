@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Viva La Vida">
 <meta property="og:description" content="写在前面的话 本文引自于Eric P https://www.zybuluo.com/codeep/note/163962 的博文，文中详细介绍了Markdown如何编写数学公式。本人作为学习，摘录一些常见的数学符号作为学习记录。 另附上在学习中遇到的坑，希望可以帮助大家避免踩坑。   首先关于Markdown的数学公式是怎么实现的：可以参考fitzeng https://juejin.im/">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-05T07:05:59.355Z">
+<meta property="og:updated_time" content="2019-09-05T12:09:57.925Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown 的数学公式应用">
 <meta name="twitter:description" content="写在前面的话 本文引自于Eric P https://www.zybuluo.com/codeep/note/163962 的博文，文中详细介绍了Markdown如何编写数学公式。本人作为学习，摘录一些常见的数学符号作为学习记录。 另附上在学习中遇到的坑，希望可以帮助大家避免踩坑。   首先关于Markdown的数学公式是怎么实现的：可以参考fitzeng https://juejin.im/">
@@ -197,6 +197,17 @@
 </ul>
 <h2 id="2-输入上下标"><a href="#2-输入上下标" class="headerlink" title="2.输入上下标"></a>2.输入上下标</h2><p><code>^</code>表示上标，<code>_</code>表示下标,如果上下标超过一个字符，需要<code>{}</code>将内容变为一个整体<br>例如：  </p>
 <pre><code>$$x^{y^z}=(1+{\rm e}^x)^{-2xy^w}$$</code></pre><p>$$x^{y^z}=(1+{\rm e}^x)^{-2xy^w}$$</p>
+<h2 id="3-如何输入括号和符号"><a href="#3-如何输入括号和符号" class="headerlink" title="3.如何输入括号和符号"></a>3.如何输入括号和符号</h2><p>()、[]、|表示符号本身，使用<code>\{\}</code>来表示{}。<br>要显示大号的括号或分隔符时，要用 \left 和 \right 命令。<br><strong>表示向下取整</strong>：\lfloor取整的数\rfloor<br><strong>表示向上取整</strong>：\lceil取整的数\rceil</p>
+<h2 id="4-如何输入分数"><a href="#4-如何输入分数" class="headerlink" title="4.如何输入分数"></a>4.如何输入分数</h2><p>通常使用 \frac {分子} {分母} 命令产生一个分数，分数可嵌套。<br>如果分式很复杂，亦可使用 分子 \over 分母 命令，此时分数仅有一层。</p>
+<pre><code>$$\frac{a-1} {b-1}$$</code></pre><p>$$\frac{a-1} {b-1}$$ </p>
+<h2 id="5-如何输入积分"><a href="#5-如何输入积分" class="headerlink" title="5.如何输入积分"></a>5.如何输入积分</h2><p>使用 \int_积分下限^积分上限 {被积表达式} dx来输入一个积分。</p>
+<pre><code>$$\int_0^1{x^2}dx</code></pre><p>$$\int_0^1{x^2}dx$$<br>二重积分：<br>\iint<br>  $$\iint_0^1{x^2}dx$$</p>
+<h2 id="6-如何输入极限运算"><a href="#6-如何输入极限运算" class="headerlink" title="6.如何输入极限运算"></a>6.如何输入极限运算</h2><p>\lim_{变量 \to 表达式} 表达式 来输入一个极限。如有需求，可以更改 \to 符号至任意符号。<br>其中\infty 代表无穷</p>
+<pre><code>\lim_{n\to+\infty}\frac{1}{n(n+1)}</code></pre><p> $$\lim_{n\to+\infty}\frac{1}{n(n+1)}$$</p>
+<h2 id="7-输入累加、累乘运算"><a href="#7-输入累加、累乘运算" class="headerlink" title="7.输入累加、累乘运算"></a>7.输入累加、累乘运算</h2><p> 使用 \sum_{下标表达式}^{上标表达式} {累加表达式} 来输入一个累加。 </p>
+<pre><code>\sum_{i=1}^n \frac{1}{i^2}</code></pre><p>$$ \sum_{i=1}^n \frac{1}{i^2}$$</p>
+<h2 id="7-对数运算符"><a href="#7-对数运算符" class="headerlink" title="7.对数运算符"></a>7.对数运算符</h2><p>\log_底数 真数   </p>
+<pre><code>$$\log_2 3$$</code></pre><p>$$\log_2 3$$</p>
 
       
 
