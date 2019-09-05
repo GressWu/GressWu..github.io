@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Viva La Vida">
 <meta property="og:description" content="顺序查找应用范围：无序的 顺序表或线性链表表示的静态查找表   表内元素之间是无序的">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-05T03:19:50.281Z">
+<meta property="og:updated_time" content="2019-09-05T07:06:16.873Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性表的查找">
 <meta name="twitter:description" content="顺序查找应用范围：无序的 顺序表或线性链表表示的静态查找表   表内元素之间是无序的">
@@ -213,7 +213,18 @@ while(low&lt;=high)
     low=mid+1;
 }
 return 0;
-}</code></pre><p><strong>性能分析</strong>：<br>我们可以将查找表抽象为二叉树。<br>中点mid作为二叉树的根<br>查找次数为一的点放在第一层，查找次数为二的点放在第二层，以此类推。<br>所以推出<strong>比较次数</strong>至多为$\log_2 n$(向下取整)   +1</p>
+}</code></pre><p><strong>性能分析</strong>：<br>我们可以将查找表抽象为二叉树(判断树)。<br>中点mid作为二叉树的根<br>查找次数为一的点放在第一层，查找次数为二的点放在第二层，以此类推。<br>所以推出<strong>比较次数</strong>至多为$\log_2 n$(向下取整)   +1    </p>
+<p>如果是<strong>查找失败</strong>的话：<br>则要将有序表看作是一个满二叉树，圆形内节点作为查找情况成功的点，矩形外界点代表查找不成功的点。<br><strong>比较次数</strong>&lt;=$\log_2 n$  +1    </p>
+<p>折半查找的平均查找长度ASL(成功时)<br>设表长n=$2^h-1$,则h=$log_2  (n+1)$(此时，判定书为深度为h的<strong>满二叉树</strong>)，其中每个记录查找概率是一致的。<br>那么ASL=$log_2 (n+1)$ -1     </p>
+<p><strong>折半查找的优缺点</strong>：<br>效率比顺序查找高，但是只适用于<em>有序表</em>，且限于<em>顺序存储结构</em>（对线性链表无效）。</p>
+<h2 id="应用范围：分块有序"><a href="#应用范围：分块有序" class="headerlink" title="应用范围：分块有序"></a>应用范围：分块有序</h2><p><strong>条件</strong>：  </p>
+<ol>
+<li>把表分成几块，且表或者有序，或者分块有序。其中块是必须有序的，块内部可以是无序的。</li>
+<li>建立索引表（每个节点包括最大关键字域和指向本块第一个节点的指针）   </li>
+</ol>
+<p><strong>查找过程</strong>：<br>1.第一步要先确定待查记录的所在块。（顺序或折半查找）<br>2.再在块内查找（顺序查找）</p>
+<p><strong>性能分析</strong>：<br>分块查找的平均查找长度为：<br>ASL=对索引表查找的ASL+对块内查找的ASL<br>其中表长为n,块数为b,每块含有s个记录。<br>ASL=$log_2 (\frac {n} {s}+1)+\frac {s} {2}$</p>
+<p><strong>优点</strong>：插入和删除比较容易，无需大量移动。<br><strong>缺点</strong>：要增加一个索引表的存储空间还要对初始索引表进行排序。<br>适用范围：如果线性表既要快速查找又要经常动态变化，则可以分块查找。</p>
 
       
 
@@ -500,11 +511,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">English learning</a>
+                <a href="javascript:void(0)" class="js-tag color5">高等数学</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">高等数学</a>
+                <a href="javascript:void(0)" class="js-tag color2">English learning</a>
               </li>
             
             <div class="clearfix"></div>
