@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>线性表的查找 | Viva La Vida</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="顺序查找（线性查找）应用范围 顺序表或线性链表表示的静态查找表   表内元素之间是无序的     数据结构表示：    typedef struct //查找表的数据结构 {     ElemType *elem;     //元素存储空间基址  &amp;lt;0号单元留空&amp;gt;     int TableLen; //该查找表的长度 }SSTable; int Search_Seq(SSTable">
+  <meta name="description" content="顺序查找应用范围：无序的 顺序表或线性链表表示的静态查找表   表内元素之间是无序的     数据结构表示：    typedef struct //查找表的数据结构 {     ElemType *elem;     //元素存储空间基址  &amp;lt;0号单元留空&amp;gt;     int TableLen; //该查找表的长度 }SSTable; int Search_Seq(SSTable S">
 <meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性表的查找">
 <meta property="og:url" content="http://yoursite.com/2019/09/03/线性表的查找/index.html">
 <meta property="og:site_name" content="Viva La Vida">
-<meta property="og:description" content="顺序查找（线性查找）应用范围 顺序表或线性链表表示的静态查找表   表内元素之间是无序的     数据结构表示：    typedef struct //查找表的数据结构 {     ElemType *elem;     //元素存储空间基址  &amp;lt;0号单元留空&amp;gt;     int TableLen; //该查找表的长度 }SSTable; int Search_Seq(SSTable">
+<meta property="og:description" content="顺序查找应用范围：无序的 顺序表或线性链表表示的静态查找表   表内元素之间是无序的     数据结构表示：    typedef struct //查找表的数据结构 {     ElemType *elem;     //元素存储空间基址  &amp;lt;0号单元留空&amp;gt;     int TableLen; //该查找表的长度 }SSTable; int Search_Seq(SSTable S">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-03T08:52:01.729Z">
+<meta property="og:updated_time" content="2019-09-05T03:17:43.105Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性表的查找">
-<meta name="twitter:description" content="顺序查找（线性查找）应用范围 顺序表或线性链表表示的静态查找表   表内元素之间是无序的     数据结构表示：    typedef struct //查找表的数据结构 {     ElemType *elem;     //元素存储空间基址  &amp;lt;0号单元留空&amp;gt;     int TableLen; //该查找表的长度 }SSTable; int Search_Seq(SSTable">
+<meta name="twitter:description" content="顺序查找应用范围：无序的 顺序表或线性链表表示的静态查找表   表内元素之间是无序的     数据结构表示：    typedef struct //查找表的数据结构 {     ElemType *elem;     //元素存储空间基址  &amp;lt;0号单元留空&amp;gt;     int TableLen; //该查找表的长度 }SSTable; int Search_Seq(SSTable S">
   
     <link rel="alternative" href="/atom.xml" title="Viva La Vida" type="application/atom+xml">
   
@@ -175,7 +175,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="顺序查找（线性查找）"><a href="#顺序查找（线性查找）" class="headerlink" title="顺序查找（线性查找）"></a>顺序查找（线性查找）</h1><h2 id="应用范围"><a href="#应用范围" class="headerlink" title="应用范围"></a>应用范围</h2><ol>
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+<h1 id="顺序查找"><a href="#顺序查找" class="headerlink" title="顺序查找"></a>顺序查找</h1><h2 id="应用范围：无序的"><a href="#应用范围：无序的" class="headerlink" title="应用范围：无序的"></a>应用范围：无序的</h2><ol>
 <li>顺序表或线性链表表示的<strong>静态查找表</strong>  </li>
 <li>表内元素之间是<strong>无序</strong>的   </li>
 </ol>
@@ -193,8 +194,24 @@ int Search_Seq(SSTable ST,Elemtype key) //找关键字key的元素，如果找�
 }</code></pre><p><strong>引入哨兵的好处</strong>：  </p>
 <ol>
 <li>Search_Seq（）；循环不用再来检查越界，减少了比较次数。</li>
-<li>可以减少很多不必要的判断语句。<br>当ST.length比较大的时候，引入哨兵可以使一次查找所需平均时间减少一半！！<br>🐮🍺   🐮🍺</li>
+<li>可以减少很多不必要的判断语句。<br>当ST.length比较大的时候，引入哨兵可以使一次查找所需平均时间减少一半！！<br>🐮🍺   🐮🍺    </li>
 </ol>
+<p><strong>时间效率分析</strong>：<br>比较次数与key位置有关。<br>假设有n个数，由于是从后往前检查，最后一个数的比较次数是1，倒数第二个数的比较次数是2，以此类推。。。<br>所以第i个数的比较次数是 n-i+1 ,如果查找失败则需要比较n+1次<br><strong>时间复杂度</strong>：O(n)<br>ASL=$\frac {1} {n}\sum_{1}^{n}( {n-i+1})$<br>所以ASL(n)=(1+2+3+….+n)/n=(n+1)/2<br><strong>空间复杂度</strong>：O(1)<br><strong>查找概率不相等的时候</strong>：可以将概率高的放在表尾，概率低的放在表头。<br><strong>如果查找概率事先无法预测</strong>：那么我们可以多加一个频度域，再排序。<br><strong>优点</strong>：算法简单，适用范围广，对逻辑次序没有要求，不同存储结构均可使用。<br><strong>缺点</strong>：ASL太长，时间效率低。</p>
+<h2 id="应用范围：有序的"><a href="#应用范围：有序的" class="headerlink" title="应用范围：有序的"></a>应用范围：有序的</h2><p><strong>算法思想：</strong><br>设表长为n、low、high和mid分别表示表长，待查元素所在区间的上界，下界和中点，key为待查找的值。   </p>
+<pre><code>int Search_Bin(SSTable ST,KeyType key){
+low=1;high=ST.length;   //初始化  
+while(low&lt;=high)
+{
+    mid=(high+low)/2;
+    if(key==ST.elem[mid].key)
+    return mid;
+    else if(key&lt;ST.elem[mid].key)
+    high=mid-1;
+    else
+    low=mid+1;
+}
+return 0;
+}</code></pre><p><strong>性能分析</strong>：<br>我们可以将查找表抽象为二叉树。<br>中点mid作为二叉树的根<br>查找次数为一的点放在第一层，查找次数为二的点放在第二层，以此类推。<br>所以推出<strong>比较次数</strong>至多为$\log_2 n$(向下取整)   +1</p>
 
       
 
@@ -461,11 +478,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown的使用方法</a>
+                <a href="javascript:void(0)" class="js-tag color1">Git与Github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Git与Github</a>
+                <a href="javascript:void(0)" class="js-tag color4">Markdown的使用方法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -473,11 +490,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">政治</a>
+                <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数学</a>
+                <a href="javascript:void(0)" class="js-tag color3">政治</a>
               </li>
              
               <li class="article-tag-list-item">
