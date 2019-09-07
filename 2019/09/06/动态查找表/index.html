@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>向GitHub提交代码 | Viva La Vida</title>
+  <title>动态查找表 | Viva La Vida</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="SSHSSH是一种网络协议，用于计算机之间的加密登录。目前是每一台Linux电脑的标准配置。而大多数Git服务器都会选择使用SSH    公钥来进行授权，所以想要在GitHub提交代码的第一步就是要先添加SSH    key    配置。">
-<meta name="keywords" content="Git与Github">
+  <meta name="description" content="动态查找表的特点表结构是在查找过程中动态生成的，假设给定值key，若表中存在关键字等于key则返回key的记录，则返回key值。否则插入关键字等于key的记录。   二叉排序树目的：当表插入、删除操作频繁时，为维护表的有序性。特点：  左子树若不空，则左子树所有节点的值均小于它的根节点的值。  右子树若不空，则右子树所有节点的值均大于它的根节点的值。  使用中序遍历 是一个递增有序的数列。操作过程">
+<meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="向GitHub提交代码">
-<meta property="og:url" content="http://yoursite.com/2019/09/01/向GitHub提交代码/index.html">
+<meta property="og:title" content="动态查找表">
+<meta property="og:url" content="http://yoursite.com/2019/09/06/动态查找表/index.html">
 <meta property="og:site_name" content="Viva La Vida">
-<meta property="og:description" content="SSHSSH是一种网络协议，用于计算机之间的加密登录。目前是每一台Linux电脑的标准配置。而大多数Git服务器都会选择使用SSH    公钥来进行授权，所以想要在GitHub提交代码的第一步就是要先添加SSH    key    配置。">
+<meta property="og:description" content="动态查找表的特点表结构是在查找过程中动态生成的，假设给定值key，若表中存在关键字等于key则返回key的记录，则返回key值。否则插入关键字等于key的记录。   二叉排序树目的：当表插入、删除操作频繁时，为维护表的有序性。特点：  左子树若不空，则左子树所有节点的值均小于它的根节点的值。  右子树若不空，则右子树所有节点的值均大于它的根节点的值。  使用中序遍历 是一个递增有序的数列。操作过程">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-03T06:57:27.774Z">
+<meta property="og:updated_time" content="2019-09-07T03:20:48.914Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="向GitHub提交代码">
-<meta name="twitter:description" content="SSHSSH是一种网络协议，用于计算机之间的加密登录。目前是每一台Linux电脑的标准配置。而大多数Git服务器都会选择使用SSH    公钥来进行授权，所以想要在GitHub提交代码的第一步就是要先添加SSH    key    配置。">
+<meta name="twitter:title" content="动态查找表">
+<meta name="twitter:description" content="动态查找表的特点表结构是在查找过程中动态生成的，假设给定值key，若表中存在关键字等于key则返回key的记录，则返回key值。否则插入关键字等于key的记录。   二叉排序树目的：当表插入、删除操作频繁时，为维护表的有序性。特点：  左子树若不空，则左子树所有节点的值均小于它的根节点的值。  右子树若不空，则右子树所有节点的值均大于它的根节点的值。  使用中序遍历 是一个递增有序的数列。操作过程">
   
     <link rel="alternative" href="/atom.xml" title="Viva La Vida" type="application/atom+xml">
   
@@ -155,35 +155,48 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-向GitHub提交代码" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-动态查找表" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      向GitHub提交代码
+      动态查找表
     </h1>
   
 
         
-        <a href="/2019/09/01/向GitHub提交代码/" class="archive-article-date">
-  	<time datetime="2019-09-01T14:12:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
+        <a href="/2019/09/06/动态查找表/" class="archive-article-date">
+  	<time datetime="2019-09-06T03:18:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h2><p>SSH是一种网络协议，用于计算机之间的加密登录。目前是每一台Linux电脑的标准配置。而大多数Git服务器都会选择使用SSH    公钥来进行授权，所以想要在GitHub提交代码的第一步就是要先添加SSH    key    配置。    </p>
-<a id="more"></a> 
-<h2 id="生成SSH-key"><a href="#生成SSH-key" class="headerlink" title="生成SSH key"></a>生成SSH key</h2><p>输入<strong>ssh-keygen    -t    rsa</strong>，什么意思呢？就是指定rsa算法生成密钥，接着连续三个回车键（不需要输入密码），然后就会生成两个文件id_rsa和id_rsa.pub，而id_rsa是密钥，id_rsa.pub就是公钥。这两文件默认分别在如下目录里生成：<br>Linux/Mac系统在~/.ssh下，win系统在/c/Documents and Settings/username/.ssh下，都是隐藏文件，相信你们有办法查看的。<br>接下来要做的是把id_rsa.pub的内容添加到GitHub上，这样你本地的id_rsa密钥跟GitHub上的id_rsa.pub公钥进行配对，授权成功才可以提交代码。</p>
-<h2 id="GitHub上添加SSH-key"><a href="#GitHub上添加SSH-key" class="headerlink" title="GitHub上添加SSH key"></a>GitHub上添加SSH key</h2><p>第一步先在GitHub上的设置页面，点击最左侧SSH    and    GPG    keys<br>然后点击右上角的New    SSH    key    按钮<br>需要做的只是在Key那栏把id_rsa.pub公钥文件里的内容复制粘贴进去就可以了（上述示例为了安全粘贴的公钥是无效的），Title    那栏不需要填写，点击Add    SSH    key    按钮就ok了。<br>Windows用户，设置显示隐藏文件，可以使用    EditPlus或者Sublime    打开复制就行了<br>SSH    key    添加成功之后，输入<strong>ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a></strong>进行测试，如果出现以下提示证明添加成功了.<br>Hi username! You’ve successfully authenticated.   </p>
-<h2 id="Push-amp-Pull"><a href="#Push-amp-Pull" class="headerlink" title="Push&amp;Pull"></a>Push&amp;Pull</h2><p>在提交代码之前我们先要了解两个命令，也是上次的文章没有介绍的，因为这两个命令需要 跟远程仓库配合。<br><strong>Push：</strong>直译过来就是「推」的意思，什么意思呢？如果你本地代码有更新了，那么就需要把本地代码推到远程仓库，这样本地仓库跟远程仓库就可以保持同步了。</p>
-<pre><code>git    push origin    master</code></pre><p>意思就是把本地代码推到远程master分支。<br><strong>Pull:</strong>直译过来就是「拉」的意思，如果别人提交代码到远程仓库，这个时候你需要把远程仓库的最新代码拉下来，然后保证两端代码的同步。</p>
-<pre><code>git    pull origin    master</code></pre><p>意思就是把远程最新的代码更新到本地。一般我们在<strong>push之前都会先pull</strong>,这样不容易冲突。</p>
-<h2 id="提交代码"><a href="#提交代码" class="headerlink" title="提交代码"></a>提交代码</h2><p><strong>方法一：</strong>Clone自己的项目我们以我在GitHub上创建的test项目为例，执行如下命令：</p>
-<pre><code>git    clone    git@github.com:stormzhang/test.git</code></pre>
+        <h2 id="动态查找表的特点"><a href="#动态查找表的特点" class="headerlink" title="动态查找表的特点"></a>动态查找表的特点</h2><p>表结构是在查找过程中动态生成的，假设给定值key，若表中存在关键字等于key则返回key的记录，则返回key值。否则插入关键字等于key的记录。  </p>
+<h2 id="二叉排序树"><a href="#二叉排序树" class="headerlink" title="二叉排序树"></a>二叉排序树</h2><p>目的：当表插入、删除操作频繁时，为维护表的<strong>有序性</strong>。<br>特点：</p>
+<ol>
+<li><p>左子树若不空，则左子树所有节点的值均小于它的根节点的值。</p>
+</li>
+<li><p>右子树若不空，则右子树所有节点的值均大于它的根节点的值。</p>
+</li>
+<li><p>使用<strong>中序遍历</strong> 是一个递增有序的数列。<br>操作过程：</p>
+</li>
+<li><p>若查找的关键字等于根节点，成功</p>
+</li>
+<li><p>否则 若小于根节点，查看左子树<br>若大于根节点，则查看右子树。（如果没有该数，则插入）</p>
+</li>
+<li><p>递归之前的操作。<br>存储结构：<br>采用二叉链表。</p>
+<p> typedef struct<br> {</p>
+<pre><code>KeyType key;         //关键字项
+InfoType other;     //其他数据域</code></pre><p> }ElemType;<br> typedef struct BSTNode{</p>
+<pre><code>ElemType data;     //数据域
+struct BSTNode *lchild,*rchild;  //左右孩子指针</code></pre><p> }BSTNode,*BSTree;</p>
+</li>
+</ol>
+
       
 
       
@@ -217,7 +230,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Git与Github</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
         		</li>
       		
 		</ul>
@@ -273,7 +286,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/01/向GitHub提交代码/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/06/动态查找表/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -287,18 +300,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/02/高等数学思路的一点总结/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          高等数学思路的一点总结
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/01/图的应用——拓扑排序与关键路径/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">图的应用——拓扑排序与关键路径</div>
+    <a href="/2019/09/04/数学公式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数学公式</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -326,7 +330,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="向GitHub提交代码" data-title="向GitHub提交代码" data-url="http://yoursite.com/2019/09/01/向GitHub提交代码/"></div>
+	<div class="ds-thread" data-thread-key="动态查找表" data-title="动态查找表" data-url="http://yoursite.com/2019/09/06/动态查找表/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
