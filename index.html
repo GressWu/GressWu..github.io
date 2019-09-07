@@ -172,28 +172,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="动态查找表的特点"><a href="#动态查找表的特点" class="headerlink" title="动态查找表的特点"></a>动态查找表的特点</h2><p>表结构是在查找过程中动态生成的，假设给定值key，若表中存在关键字等于key则返回key的记录，则返回key值。否则插入关键字等于key的记录。  </p>
-<h2 id="二叉排序树"><a href="#二叉排序树" class="headerlink" title="二叉排序树"></a>二叉排序树</h2><p>目的：当表插入、删除操作频繁时，为维护表的<strong>有序性</strong>。<br>特点：</p>
-<ol>
-<li><p>左子树若不空，则左子树所有节点的值均小于它的根节点的值。</p>
-</li>
-<li><p>右子树若不空，则右子树所有节点的值均大于它的根节点的值。</p>
-</li>
-<li><p>使用<strong>中序遍历</strong> 是一个递增有序的数列。<br>操作过程：</p>
-</li>
-<li><p>若查找的关键字等于根节点，成功</p>
-</li>
-<li><p>否则 若小于根节点，查看左子树<br>若大于根节点，则查看右子树。（如果没有该数，则插入）</p>
-</li>
-<li><p>递归之前的操作。<br>存储结构：<br>采用二叉链表。</p>
-<p> typedef struct<br> {</p>
-<pre><code>KeyType key;         //关键字项
-InfoType other;     //其他数据域</code></pre><p> }ElemType;<br> typedef struct BSTNode{</p>
-<pre><code>ElemType data;     //数据域
-struct BSTNode *lchild,*rchild;  //左右孩子指针</code></pre><p> }BSTNode,*BSTree;</p>
-</li>
-</ol>
-
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+<h2 id="动态查找表的特点"><a href="#动态查找表的特点" class="headerlink" title="动态查找表的特点"></a>动态查找表的特点</h2><p>表结构是在查找过程中动态生成的，假设给定值key，若表中存在关键字等于key则返回key的记录，则返回key值。否则插入关键字等于key的记录。  </p>
+        
       
 
       
@@ -1052,7 +1033,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">政治</a>
+                <a href="javascript:void(0)" class="js-tag color2">English learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1060,11 +1041,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">高等数学</a>
+                <a href="javascript:void(0)" class="js-tag color3">政治</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">English learning</a>
+                <a href="javascript:void(0)" class="js-tag color5">高等数学</a>
               </li>
             
             <div class="clearfix"></div>

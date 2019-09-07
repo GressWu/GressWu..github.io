@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>动态查找表 | Viva La Vida</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="动态查找表的特点表结构是在查找过程中动态生成的，假设给定值key，若表中存在关键字等于key则返回key的记录，则返回key值。否则插入关键字等于key的记录。   二叉排序树目的：当表插入、删除操作频繁时，为维护表的有序性。特点：  左子树若不空，则左子树所有节点的值均小于它的根节点的值。  右子树若不空，则右子树所有节点的值均大于它的根节点的值。  使用中序遍历 是一个递增有序的数列。操作过程">
+  <meta name="description" content="动态查找表的特点表结构是在查找过程中动态生成的，假设给定值key，若表中存在关键字等于key则返回key的记录，则返回key值。否则插入关键字等于key的记录。">
 <meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="动态查找表">
 <meta property="og:url" content="http://yoursite.com/2019/09/06/动态查找表/index.html">
 <meta property="og:site_name" content="Viva La Vida">
-<meta property="og:description" content="动态查找表的特点表结构是在查找过程中动态生成的，假设给定值key，若表中存在关键字等于key则返回key的记录，则返回key值。否则插入关键字等于key的记录。   二叉排序树目的：当表插入、删除操作频繁时，为维护表的有序性。特点：  左子树若不空，则左子树所有节点的值均小于它的根节点的值。  右子树若不空，则右子树所有节点的值均大于它的根节点的值。  使用中序遍历 是一个递增有序的数列。操作过程">
+<meta property="og:description" content="动态查找表的特点表结构是在查找过程中动态生成的，假设给定值key，若表中存在关键字等于key则返回key的记录，则返回key值。否则插入关键字等于key的记录。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-07T03:20:48.914Z">
+<meta property="og:updated_time" content="2019-09-07T06:47:23.488Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动态查找表">
-<meta name="twitter:description" content="动态查找表的特点表结构是在查找过程中动态生成的，假设给定值key，若表中存在关键字等于key则返回key的记录，则返回key值。否则插入关键字等于key的记录。   二叉排序树目的：当表插入、删除操作频繁时，为维护表的有序性。特点：  左子树若不空，则左子树所有节点的值均小于它的根节点的值。  右子树若不空，则右子树所有节点的值均大于它的根节点的值。  使用中序遍历 是一个递增有序的数列。操作过程">
+<meta name="twitter:description" content="动态查找表的特点表结构是在查找过程中动态生成的，假设给定值key，若表中存在关键字等于key则返回key的记录，则返回key值。否则插入关键字等于key的记录。">
   
     <link rel="alternative" href="/atom.xml" title="Viva La Vida" type="application/atom+xml">
   
@@ -175,7 +175,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="动态查找表的特点"><a href="#动态查找表的特点" class="headerlink" title="动态查找表的特点"></a>动态查找表的特点</h2><p>表结构是在查找过程中动态生成的，假设给定值key，若表中存在关键字等于key则返回key的记录，则返回key值。否则插入关键字等于key的记录。  </p>
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+<h2 id="动态查找表的特点"><a href="#动态查找表的特点" class="headerlink" title="动态查找表的特点"></a>动态查找表的特点</h2><p>表结构是在查找过程中动态生成的，假设给定值key，若表中存在关键字等于key则返回key的记录，则返回key值。否则插入关键字等于key的记录。  </p>
+<a id="more"></a>
 <h2 id="二叉排序树"><a href="#二叉排序树" class="headerlink" title="二叉排序树"></a>二叉排序树</h2><p>目的：当表插入、删除操作频繁时，为维护表的<strong>有序性</strong>。<br>特点：</p>
 <ol>
 <li><p>左子树若不空，则左子树所有节点的值均小于它的根节点的值。</p>
@@ -189,13 +191,43 @@
 <li><p>否则 若小于根节点，查看左子树<br>若大于根节点，则查看右子树。（如果没有该数，则插入）</p>
 </li>
 <li><p>递归之前的操作。<br>存储结构：<br>采用二叉链表。</p>
-<p> typedef struct<br> {</p>
-<pre><code>KeyType key;         //关键字项
-InfoType other;     //其他数据域</code></pre><p> }ElemType;<br> typedef struct BSTNode{</p>
-<pre><code>ElemType data;     //数据域
-struct BSTNode *lchild,*rchild;  //左右孩子指针</code></pre><p> }BSTNode,*BSTree;</p>
-</li>
+<pre><code>typedef struct          //节点
+{
+KeyType key;         //关键字项
+InfoType other;     //其他数据域
+}ElemType;
+typedef struct BSTNode{     //二叉排序树
+ElemType data;     //数据域
+struct BSTNode *lchild,*rchild;  //左右孩子指针
+}BSTNode,*BSTree;</code></pre></li>
 </ol>
+<p><strong>二叉排序树的算法</strong></p>
+<ol>
+<li><p>查找算法</p>
+<pre><code>BStree SearchBST(BSTree T,int key)
+{
+    if(!T||key==T-&gt;data.key) return T;
+    else if(key&lt;T-&gt;data.key) return Search(T-&gt;lchild,key);
+    else return Search(T-&gt;rchild,key);
+}</code></pre></li>
+</ol>
+<p>性能分析：<br>比较的关键次数=此节点所在层次  <strong>与树的高度有关</strong><br>最多的比较次数=树的深度<br><strong>最好情况：</strong>完全二叉树。时间复杂度 O(n)=O($log_2 n$)<br><strong>最坏情况：</strong>单支树。    时间复杂度与顺序查找情况相同：O(n)</p>
+<ol start="2">
+<li>插入算法<br>实质是将一个无序序列转换为有序序列。<br>不同插入次序的序列生成不同形态的二叉排序树。   </li>
+</ol>
+<p><strong>步骤</strong>：首先将第一个节点作为数的根，一词比较，小的数插在左边，大的树插在右边。    </p>
+<ol start="3">
+<li>删除算法<br>从二叉排序树中删除一个节点，不能把以该节点的为根的子树删掉，只能删除该节点，并且还应该保证删除后所得二叉排序树仍然满足二叉排序树的性质不变。<br>以此分为<strong>三种情况</strong>：   </li>
+<li>被删除的节点是叶子节点：直接删除该节点</li>
+<li>被删除的节点只有左子树或者只有右子树：用其左子树或者右子树替换它。  </li>
+<li>如果该节点又有左子树又有右子树，那么就用它的直接前驱或者后继来代替它，前驱或后继的这个点也要删除用以上三种方法。<h2 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h2></li>
+</ol>
+<p><strong>目的：</strong>由于平衡二叉树的形态不平衡，查找效率不稳定，所以要做“平衡化”处理，尽量让二叉树形态均衡。<br><strong>性质：</strong>    </p>
+<ol>
+<li>左子树与右子树的高度之差的绝对值小于等于1。</li>
+<li>左子树和右子树也是平衡二叉树。 </li>
+</ol>
+<p><strong>平衡因子：</strong>该节点的左子树的深度减去右子树的深度，那么平衡二叉树上所有节点的平衡因子只有-1，0，1。</p>
 
       
 
@@ -465,7 +497,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">政治</a>
+                <a href="javascript:void(0)" class="js-tag color2">English learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -473,11 +505,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">高等数学</a>
+                <a href="javascript:void(0)" class="js-tag color3">政治</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">English learning</a>
+                <a href="javascript:void(0)" class="js-tag color5">高等数学</a>
               </li>
             
             <div class="clearfix"></div>
