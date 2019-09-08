@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Viva La Vida">
 <meta property="og:description" content="动态查找表的特点表结构是在查找过程中动态生成的，假设给定值key，若表中存在关键字等于key则返回key的记录，则返回key值。否则插入关键字等于key的记录。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-07T07:29:50.030Z">
+<meta property="og:updated_time" content="2019-09-08T08:07:30.904Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动态查找表">
 <meta name="twitter:description" content="动态查找表的特点表结构是在查找过程中动态生成的，假设给定值key，若表中存在关键字等于key则返回key的记录，则返回key值。否则插入关键字等于key的记录。">
@@ -180,17 +180,17 @@
 <a id="more"></a>
 <h2 id="二叉排序树"><a href="#二叉排序树" class="headerlink" title="二叉排序树"></a>二叉排序树</h2><p>目的：当表插入、删除操作频繁时，为维护表的<strong>有序性</strong>。<br>特点：</p>
 <ol>
-<li><p>左子树若不空，则左子树所有节点的值均小于它的根节点的值。</p>
-</li>
-<li><p>右子树若不空，则右子树所有节点的值均大于它的根节点的值。</p>
-</li>
-<li><p>使用<strong>中序遍历</strong> 是一个递增有序的数列。<br>操作过程：</p>
-</li>
-<li><p>若查找的关键字等于根节点，成功</p>
-</li>
-<li><p>否则 若小于根节点，查看左子树<br>若大于根节点，则查看右子树。（如果没有该数，则插入）</p>
-</li>
-<li><p>递归之前的操作。<br>存储结构：<br>采用二叉链表。</p>
+<li>左子树若不空，则左子树所有节点的值均小于它的根节点的值。</li>
+<li>右子树若不空，则右子树所有节点的值均大于它的根节点的值。</li>
+<li>使用<strong>中序遍历</strong> 是一个递增有序的数列。</li>
+</ol>
+<p>操作过程：</p>
+<ol>
+<li>若查找的关键字等于根节点，成功</li>
+<li>否则 若小于根节点，查看左子树<br>若大于根节点，则查看右子树。（如果没有该数，则插入）</li>
+<li>递归之前的操作。   </li>
+</ol>
+<p><strong>存储结构</strong>：<br>采用二叉链表。</p>
 <pre><code>typedef struct          //节点
 {
 KeyType key;         //关键字项
@@ -199,9 +199,7 @@ InfoType other;     //其他数据域
 typedef struct BSTNode{     //二叉排序树
 ElemType data;     //数据域
 struct BSTNode *lchild,*rchild;  //左右孩子指针
-}BSTNode,*BSTree;</code></pre></li>
-</ol>
-<p><strong>二叉排序树的算法</strong></p>
+}BSTNode,*BSTree;</code></pre><p><strong>二叉排序树的算法</strong></p>
 <ol>
 <li><p>查找算法</p>
 <pre><code>BStree SearchBST(BSTree T,int key)
@@ -211,7 +209,7 @@ struct BSTNode *lchild,*rchild;  //左右孩子指针
     else return Search(T-&gt;rchild,key);
 }</code></pre></li>
 </ol>
-<p>性能分析：<br>比较的关键次数=此节点所在层次  <strong>与树的高度有关</strong><br>最多的比较次数=树的深度<br><strong>最好情况：</strong>完全二叉树。时间复杂度 O(n)=O($log_2 n$)<br><strong>最坏情况：</strong>单支树。    时间复杂度与顺序查找情况相同：O(n)</p>
+<p>性能分析：<br>比较的关键次数=此节点所在层次  <strong>与树的高度有关</strong><br>最多的比较次数=树的深度<br><strong>最好情况</strong>：完全二叉树。时间复杂度 O(n)=O($log_2 n$)<br><strong>最坏情况</strong>：单支树。    时间复杂度与顺序查找情况相同：O(n)</p>
 <ol start="2">
 <li>插入算法<br>实质是将一个无序序列转换为有序序列。<br>不同插入次序的序列生成不同形态的二叉排序树。   </li>
 </ol>
@@ -227,7 +225,21 @@ struct BSTNode *lchild,*rchild;  //左右孩子指针
 <li>左子树与右子树的高度之差的绝对值小于等于1。</li>
 <li>左子树和右子树也是平衡二叉树。 </li>
 </ol>
-<p><strong>平衡因子：</strong>该节点的左子树的深度减去右子树的深度，那么平衡二叉树上所有节点的平衡因子只有-1，0，1。<br><strong>失衡二叉树的分析与调整：</strong><br>当二叉树因子绝对值大于1时，该二叉树则为失衡二叉树。<br>调整（分为四种类型）：<br>1. </p>
+<p><strong>平衡因子：</strong>该节点的左子树的深度减去右子树的深度，那么平衡二叉树上所有节点的平衡因子只有-1，0，1。   </p>
+<p><strong>失衡二叉树的分析与调整：</strong><br>当二叉树因子绝对值大于1时，该二叉树则为失衡二叉树。<br>调整（分为四种类型）：   </p>
+<ol>
+<li>在左子树为根节点插入左子树失衡—&gt;单向右旋转平衡处理</li>
+<li>在右子树为根节点插入右子树失衡—&gt;单项左旋转平衡处理</li>
+<li>在左子树为根节点插入右子树失衡—&gt;先右后左双向平衡处理</li>
+<li>在右子树为根节点插入左子树失衡—&gt;先左后右双向平衡处理</li>
+</ol>
+<p><strong>调整的原则：</strong></p>
+<ol>
+<li>降低高度</li>
+<li>保持二叉排序树性质，左子树小，右子树大</li>
+<li>找到最小失衡子树进行调整</li>
+<li>在失衡子树中找到中间的数，把他放到中间作为新的根节点。</li>
+</ol>
 
       
 
@@ -485,11 +497,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Git与Github</a>
+                <a href="javascript:void(0)" class="js-tag color4">Markdown的使用方法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown的使用方法</a>
+                <a href="javascript:void(0)" class="js-tag color1">Git与Github</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -497,19 +509,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">政治</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">高等数学</a>
+                <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">English learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">高等数学</a>
               </li>
             
             <div class="clearfix"></div>
