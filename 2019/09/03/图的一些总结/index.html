@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>图的一些总结 | Viva La Vida</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="若一个无向图有n个顶点和n-1条边，可以使它连通，但是没有环（生成树）。如再加一条边，如果不考虑重边的情况下，则必然有环。 有向图的邻接表存储结构，顶点v在边表中出现的次数与顶点v的入度有关。 假设有n个顶点，e条边，删除与某个顶点相关联的所有边的复杂度为O(n+e)。 设图G的邻接矩阵为A，A^n记做为矩阵B，B[i][j]的值表现为顶点i到顶点j长度为n的路径一共是该点的值。 关于图的广度">
+  <meta name="description" content="若一个无向图有n个顶点和n-1条边，可以使它连通，但是没有环（生成树）。如再加一条边，如果不考虑重边的情况下，则必然有环。 有向图的邻接表存储结构，顶点v在边表中出现的次数与顶点v的入度有关。 假设有n个顶点，e条边，删除与某个顶点相关联的所有边的复杂度为O(n+e)。">
 <meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="图的一些总结">
 <meta property="og:url" content="http://yoursite.com/2019/09/03/图的一些总结/index.html">
 <meta property="og:site_name" content="Viva La Vida">
-<meta property="og:description" content="若一个无向图有n个顶点和n-1条边，可以使它连通，但是没有环（生成树）。如再加一条边，如果不考虑重边的情况下，则必然有环。 有向图的邻接表存储结构，顶点v在边表中出现的次数与顶点v的入度有关。 假设有n个顶点，e条边，删除与某个顶点相关联的所有边的复杂度为O(n+e)。 设图G的邻接矩阵为A，A^n记做为矩阵B，B[i][j]的值表现为顶点i到顶点j长度为n的路径一共是该点的值。 关于图的广度">
+<meta property="og:description" content="若一个无向图有n个顶点和n-1条边，可以使它连通，但是没有环（生成树）。如再加一条边，如果不考虑重边的情况下，则必然有环。 有向图的邻接表存储结构，顶点v在边表中出现的次数与顶点v的入度有关。 假设有n个顶点，e条边，删除与某个顶点相关联的所有边的复杂度为O(n+e)。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-15T02:41:18.577Z">
+<meta property="og:updated_time" content="2019-09-19T08:05:46.747Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图的一些总结">
-<meta name="twitter:description" content="若一个无向图有n个顶点和n-1条边，可以使它连通，但是没有环（生成树）。如再加一条边，如果不考虑重边的情况下，则必然有环。 有向图的邻接表存储结构，顶点v在边表中出现的次数与顶点v的入度有关。 假设有n个顶点，e条边，删除与某个顶点相关联的所有边的复杂度为O(n+e)。 设图G的邻接矩阵为A，A^n记做为矩阵B，B[i][j]的值表现为顶点i到顶点j长度为n的路径一共是该点的值。 关于图的广度">
+<meta name="twitter:description" content="若一个无向图有n个顶点和n-1条边，可以使它连通，但是没有环（生成树）。如再加一条边，如果不考虑重边的情况下，则必然有环。 有向图的邻接表存储结构，顶点v在边表中出现的次数与顶点v的入度有关。 假设有n个顶点，e条边，删除与某个顶点相关联的所有边的复杂度为O(n+e)。">
   
     <link rel="alternative" href="/atom.xml" title="Viva La Vida" type="application/atom+xml">
   
@@ -179,7 +179,7 @@
 <ol>
 <li>若一个无向图有n个顶点和n-1条边，可以使它连通，但是没有环（生成树）。如再加一条边，如果不考虑重边的情况下，则必然有环。</li>
 <li>有向图的邻接表存储结构，顶点v在边表中出现的次数与顶点v的入度有关。</li>
-<li>假设有n个顶点，e条边，删除与某个顶点相关联的所有边的复杂度为O(n+e)。</li>
+<li>假设有n个顶点，e条边，删除与某个顶点相关联的所有边的复杂度为O(n+e)。<a id="more"></a></li>
 <li>设图G的邻接矩阵为A，A^n记做为矩阵B，B[i][j]的值表现为顶点i到顶点j长度为n的路径一共是该点的值。</li>
 <li>关于图的<strong>广度优先遍历</strong>（BFS算法），使用辅助数组标志顶点是否被访问过，使用队列进行遍历（利用先进先出的特性，与树的层次遍历相像）。队非空时，则队头元素出队且入队刚才队头元素的相邻接元素。</li>
 <li>图的<strong>邻接矩阵</strong>是唯一的，但是<strong>邻接表</strong>若输入边的次序不同，生成的邻接表也不同。因此，基于<strong>邻接矩阵</strong> DFS序列和BFS序列是<strong>唯一</strong>的，基于<strong>邻接表</strong>的BFS与DFS序列<strong>不唯一</strong>。</li>
@@ -477,6 +477,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">English learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">政治</a>
               </li>
              
@@ -486,10 +490,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">高等数学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">English learning</a>
               </li>
             
             <div class="clearfix"></div>
