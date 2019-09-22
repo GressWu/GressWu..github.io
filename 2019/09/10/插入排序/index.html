@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Viva La Vida">
 <meta property="og:description" content="基本思想每步将一个待排序的对象，按其关键码大小，插入到前面已经排好序的一组对象的合适位置上，直到对象全部插入为止。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-11T13:59:46.869Z">
+<meta property="og:updated_time" content="2019-09-21T23:38:53.858Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="插入排序">
 <meta name="twitter:description" content="基本思想每步将一个待排序的对象，按其关键码大小，插入到前面已经排好序的一组对象的合适位置上，直到对象全部插入为止。">
@@ -179,9 +179,10 @@
 <a id="more"></a>
 <h2 id="直接插入排序（稳定排序）"><a href="#直接插入排序（稳定排序）" class="headerlink" title="直接插入排序（稳定排序）"></a>直接插入排序（稳定排序）</h2><p><strong>步骤</strong>：   </p>
 <ol>
-<li>赋值插入元素</li>
-<li>记录后移，查找插入位置</li>
-<li>插入到正确位<h2 id="折半查找法"><a href="#折半查找法" class="headerlink" title="折半查找法"></a>折半查找法</h2><h2 id="希尔排序（不稳定排序）"><a href="#希尔排序（不稳定排序）" class="headerlink" title="希尔排序（不稳定排序）"></a>希尔排序（不稳定排序）</h2>先将整个序列分为若干子序列，分别进行直接插入排序，待整个序列中的记录“基本有序”时，再对全体记录进行一次直接插入排序</li>
+<li>分为两个部分一个是已排好的序列，另一个是未排好的序列</li>
+<li>未排好的序列的第一个数作为标兵（不用检查越界，减少比较次数）</li>
+<li>从后往前比，如果数比标兵大则往后移一位。</li>
+<li>遍历所有结果，重复上面三步，结束排序。<h2 id="折半查找法"><a href="#折半查找法" class="headerlink" title="折半查找法"></a>折半查找法</h2>时间复杂度为O（n^2） 利用前半部分是有序序列<h2 id="希尔排序（不稳定排序）"><a href="#希尔排序（不稳定排序）" class="headerlink" title="希尔排序（不稳定排序）"></a>希尔排序（不稳定排序）</h2>先将整个序列分为若干子序列，分别进行直接插入排序，待整个序列中的记录“基本有序”时，再对全体记录进行一次直接插入排序</li>
 </ol>
 <p><strong>思路</strong>：</p>
 <ol>
@@ -477,15 +478,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">政治</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">English learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
              
               <li class="article-tag-list-item">
