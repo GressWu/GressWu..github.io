@@ -60,7 +60,7 @@
 			</ul>
 
 		</nav>
-		<a>Total Articles:29</a>
+		<a>Total Articles:30</a>
 		<nav class="header-smart-menu">
     		
     			
@@ -157,6 +157,148 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-Vue相关知识" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/02/Vue相关知识/">Vue相关知识</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/02/Vue相关知识/" class="archive-article-date">
+  	<time datetime="2020-08-02T13:02:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="引入Vue-CDN"><a href="#引入Vue-CDN" class="headerlink" title="引入Vue CDN"></a>引入Vue CDN</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Vue对象的创建与盒子之间的绑定"><a href="#Vue对象的创建与盒子之间的绑定" class="headerlink" title="Vue对象的创建与盒子之间的绑定"></a>Vue对象的创建与盒子之间的绑定</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span>              //与下方Vue对象绑定</span><br><span class="line">&#123;&#123;message&#125;&#125;                 //取Vue对象的数据 显示hello world</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">   <span class="keyword">var</span> vm=<span class="keyword">new</span> Vue(&#123; 		<span class="comment">//创建Vue对象</span></span></span><br><span class="line">   el:#app,                 //用来绑定盒子</span><br><span class="line"><span class="javascript">   data&#123;				    <span class="comment">//数据域</span></span></span><br><span class="line"><span class="javascript">	   message:<span class="string">'hello world'</span></span></span><br><span class="line">   &#125;</span><br><span class="line">   &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Vue相关的方法"><a href="#Vue相关的方法" class="headerlink" title="Vue相关的方法"></a>Vue相关的方法</h2><p><strong>1.判断</strong>：</p>
+<p><code>v-if</code> <code>v-else-if</code> <code>v-else</code></p>
+<div id="app">              //与下方Vue对象绑定
+<h1 v-if="type==='A'">A</h1>  
+ <h1 v-else-if="type==='B'">B</h1>    
+    <h1 v-else>C</h1>  
+</div>
+<script>
+   var vm=new Vue({         //创建Vue对象
+   el:#app,                 //用来绑定盒子
+   data{                    //数据域
+       flag:true,
+       type:'A'
+   }
+   });
+</script>
+
+<p><strong>2.循环</strong>：</p>
+<p><code>v-for</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app2"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"item in items"</span>&gt;</span></span><br><span class="line">           &#123;&#123;item.message&#125;&#125;</span><br><span class="line">       <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">       <span class="keyword">var</span> vmb=<span class="keyword">new</span> Vue(&#123;              <span class="comment">//创建vue对象</span></span></span><br><span class="line"><span class="javascript">           el:<span class="string">"#app2"</span>,                <span class="comment">//绑定</span></span></span><br><span class="line"><span class="javascript">           <span class="comment">//model 层 数据             //与view层双向绑定</span></span></span><br><span class="line"><span class="javascript">           data:&#123;                    <span class="comment">//绑定数据</span></span></span><br><span class="line">              </span><br><span class="line">                   items:[</span><br><span class="line"><span class="javascript">                       &#123;<span class="attr">message</span>:<span class="string">'江苏省'</span>&#125;,</span></span><br><span class="line"><span class="javascript">                       &#123;<span class="attr">message</span>:<span class="string">'苏州市'</span>&#125;</span></span><br><span class="line">                   ]</span><br><span class="line">               </span><br><span class="line">           &#125;</span><br><span class="line">       &#125;);</span><br><span class="line">   <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>3.与DOM事件绑定</strong>:</p>
+<p><code>v-on</code></p>
+<div id="app">
+        <button v-on:click="sayHi">
+            clik me
+        </button>
+    </div>
+    <script>
+        var vm=new Vue({
+            el:"#app",
+            data:{
+                message:"Hi"
+            },
+            methods:{
+                sayHi:function(){
+                    alert(this.message);
+                }
+            }
+        });
+    </script>
+
+<p><strong>4.动态地绑定一个或多个特性、或一个组件 prop 到表达式:</strong></p>
+<p><code>v-bind</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-bind:title</span>=<span class="string">"message"</span>&gt;</span></span><br><span class="line">            鼠标悬停</span><br><span class="line">        <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> vm=<span class="keyword">new</span> Vue(&#123;              <span class="comment">//创建vue对象</span></span></span><br><span class="line"><span class="javascript">            el:<span class="string">"#app"</span>,                <span class="comment">//绑定</span></span></span><br><span class="line"><span class="javascript">            <span class="comment">//model 层 数据 //与view层双向绑定</span></span></span><br><span class="line"><span class="javascript">            data:&#123;                    <span class="comment">//绑定数据</span></span></span><br><span class="line"><span class="javascript">                message:<span class="string">"hello,vue!"</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>5.在表单控件或者组件上创建双向绑定</strong></p>
+<p><code>v-model</code></p>
+   <div id="app">
+        <textarea v-model="message"></textarea>
+        
+        选择性别<input type="radio" value="男" v-model="sex">男
+                <input type="radio" value="女" v-model="sex">女
+                
+    </div>
+    <script>
+        var vm=new Vue({
+            el:"#app",
+            data:{
+                message:"",
+                sex:""
+            }
+        });
+    </script>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/02/Vue相关知识/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-整数反转" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -868,82 +1010,6 @@
 
 
   
-    <article id="post-排序基础内容" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/10/排序基础内容/">排序基础内容</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/10/排序基础内容/" class="archive-article-date">
-  	<time datetime="2019-09-10T06:18:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>排序方法的分类：<br><strong>按数据存储介质</strong>：内部排序和外部排序  （内存 外存 ）<br><strong>按比较个数</strong>：串行排序和并行排序<br><strong>按主要操作</strong>：比较排序和基数排序<br><strong>按辅助空间</strong>：原地排序和非原地排序<br><strong>按稳定性</strong>： 稳定排序和非稳定排序<br><strong>按自然性排序</strong>：自然、非自然   </p>
-        
-          <a class="article-more-a" href="/2019/09/10/排序基础内容/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/10/排序基础内容/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1066,7 +1132,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Git与Github</a>
+                <a href="javascript:void(0)" class="js-tag color4">JSP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1074,19 +1144,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JSP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+                <a href="javascript:void(0)" class="js-tag color1">Git与Github</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
              
               <li class="article-tag-list-item">
