@@ -18,7 +18,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://yqfile.alicdn.com/52e57c5c96885ac93fe63ee949fc6068a996949a.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190307120658954.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzU3NTY5,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2020-07-19T02:07:57.199Z">
+<meta property="og:updated_time" content="2020-08-08T14:29:52.952Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="域名系统DNS">
 <meta name="twitter:description" content="什么是域名系统DNS(Domain Name System)DNS是互联网使用的命名系统，用来把便于人们使用的机器名字转换为IP地址。 DNS是分布式系统，即使单个计算机出现问题，也不会妨碍整个DNS系统的正常运行。且DNS系统可以使大多数名字都在本地进行解析，仅少量需要在互联网上解析。 互联网的域名结构域名结构 互联网采用层次树状的命名方法。域可以划分为子域，子域又可以划分子域。这样就形成了顶级">
@@ -68,7 +68,7 @@
 			</ul>
 
 		</nav>
-		<a>Total Articles:30</a>
+		<a>Total Articles:31</a>
 		<nav class="header-smart-menu">
     		
     			
@@ -220,18 +220,17 @@
 <p>当一台主机发出DNS查询请求时，这个请求就会发送给本地服务器。</p>
 </li>
 </ul>
-<p><strong>域名的解析过程</strong></p>
-<ol>
-<li><p><strong>递归查询</strong> </p>
+<h2 id="域名的解析过程"><a href="#域名的解析过程" class="headerlink" title="域名的解析过程"></a>域名的解析过程</h2><p><strong>递归查询</strong> </p>
 <p>主机向本地域名服务器的查询一般都是递归查询。</p>
-<p><strong>过程：</strong>1.主机向本地域名服务器进行递归查询—&gt;2.本地域名服务器向根域名服务器进行迭代查询—-&gt;3.根域名服务器向顶级域名服务器进行递归查询—-&gt;4.顶级服务器向权限服务器进行递归查询—&gt;5.权限域名服务器将结果返回给顶级域名服务器—-&gt;6.顶级区域服务器将结果返还给根服务器—&gt;7.根服务器将结果返回给本地域名服务器—-&gt;8.本地域名服务器将查询结果告诉主机。</p>
-</li>
-<li><p><strong>迭代查询</strong></p>
+<p><strong>过程：</strong>1.主机向本地域名服务器进行递归查询—&gt;2.本地域名服务器向根域名服务器进行迭代查询—-&gt;3.根域名服务器向顶级域名服务器进行递归查询—-&gt;4.顶级服务器向权限服务器进行递归查询—&gt;5.权限域名服务器将结果返回给顶级域名服务器—-&gt;6.顶级区域服务器将结果返还给根服务器—&gt;7.根服务器将结果返回给本地域名服务器—-&gt;8.本地域名服务器将查询结果告诉主机。      </p>
+<br>
+
+<p><strong>迭代查询</strong></p>
 <p>本地域名服务器向根域名服务器查询一般采用迭代查询</p>
 <p><strong>过程：</strong>1.主机服务器向本地服务器进行递归查询—&gt;2.本地服务器向根域名服务器进行迭代查询—–&gt;3.根域名服务器告诉本地域名服务器要去B顶级域名服务器进行查询—–&gt;4.本地域名服务器向B顶级域名服务器进行查询—-&gt;5.B顶级域名服务器告诉本地域名域名服务器，下次找权限域名服务器查询——&gt;6.本地服务器向权限域名服务器发器查询—&gt;7.权限域名服务器将结果告诉本地域名服务器—&gt;8.本地服务器将结果告诉本机。</p>
-</li>
-</ol>
-<p>区别：</p>
+<br>
+
+<p><strong>区别：</strong></p>
 <p>递归查询主体不同，而迭代服务器的主角始终是本地域名服务器。</p>
 <p>如果根域名服务器知道结果就迭代查询，如果不知道结果就递归查询，口口相传。</p>
 <h2 id="高速缓存"><a href="#高速缓存" class="headerlink" title="高速缓存"></a>高速缓存</h2><p>减少查询次数，提高效率。比如上一次访问了baidu，就将baidu的域名解析出来的IP地址放入缓存，下一次直接在缓存中访问百度的IP即可。</p>
@@ -501,11 +500,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Git与Github</a>
+                <a href="javascript:void(0)" class="js-tag color4">JSP</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JSP</a>
+                <a href="javascript:void(0)" class="js-tag color1">Git与Github</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -534,6 +533,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">设计</a>
               </li>
              
               <li class="article-tag-list-item">
