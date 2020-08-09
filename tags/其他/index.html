@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>散列表哈希函数 | Viva La Vida</title>
+  <title>Tag: 其他 | Viva La Vida</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本思想记录的存贮位置与关键字存在的对应关系优点：查找效率高缺点：空间效率低">
-<meta name="keywords" content="数据结构">
-<meta property="og:type" content="article">
-<meta property="og:title" content="散列表哈希函数">
-<meta property="og:url" content="http://yoursite.com/2019/09/09/散列表哈希函数/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Viva La Vida">
+<meta property="og:url" content="http://yoursite.com/tags/其他/index.html">
 <meta property="og:site_name" content="Viva La Vida">
-<meta property="og:description" content="基本思想记录的存贮位置与关键字存在的对应关系优点：查找效率高缺点：空间效率低">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-11T14:00:35.196Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="散列表哈希函数">
-<meta name="twitter:description" content="基本思想记录的存贮位置与关键字存在的对应关系优点：查找效率高缺点：空间效率低">
+<meta name="twitter:title" content="Viva La Vida">
   
     <link rel="alternative" href="/atom.xml" title="Viva La Vida" type="application/atom+xml">
   
@@ -161,197 +156,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-散列表哈希函数" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      散列表哈希函数
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/08/09/罗技K380-ipda使用技巧/" class="archive-article-date">
+  	<time datetime="2020-08-09T14:30:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-09</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/08/09/罗技K380-ipda使用技巧/">罗技K380+ipad使用技巧</a>
     </h1>
   
 
-        
-        <a href="/2019/09/09/散列表哈希函数/" class="archive-article-date">
-  	<time datetime="2019-09-09T06:36:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h2><p>记录的存贮位置与关键字存在的对应关系<br><strong>优点</strong>：查找效率高<br><strong>缺点</strong>：空间效率低</p>
-<a id="more"></a>
-<h2 id="基本术语"><a href="#基本术语" class="headerlink" title="基本术语"></a>基本术语</h2><p>冲突：不同关键码映射到同一个散列地址<br>key1!=key2 H(key1)=H(key2)<br>同义词：具有相同函数值的多个关键字   </p>
-<h2 id="构造散列函数"><a href="#构造散列函数" class="headerlink" title="构造散列函数"></a>构造散列函数</h2><p><strong>好的散列函数标准</strong>：<br>(a) 所选函数尽可能<strong>简单</strong>，以便提高<strong>转换速度</strong>。<br>(b) 所选函数对关键码计算出地址，应在散列地址<strong>集中均匀</strong>分布，以减少<strong>空间</strong>浪费。<br><strong>考虑的因素</strong>：    </p>
-<ol>
-<li>执行速度</li>
-<li>关键字长度 </li>
-<li>散列表的大小</li>
-<li>关键字的分布情况</li>
-<li>查找频率</li>
-</ol>
-<h3 id="直接定值法"><a href="#直接定值法" class="headerlink" title="直接定值法"></a>直接定值法</h3><p>HASH(key)=a.key+b (a,b常数)<br>优点： 以关键码key的某个线性函数值为散列地址，不会发生冲突<br>缺点：要占用连续空间，空间效率低</p>
-<h3 id="除留余数法"><a href="#除留余数法" class="headerlink" title="除留余数法"></a>除留余数法</h3><p>Hash(key)= key mod p (p是一个整数)<br>p取值为&lt;=m 且为质数 m为哈希表长</p>
-<h2 id="处理冲突的方法"><a href="#处理冲突的方法" class="headerlink" title="处理冲突的方法"></a>处理冲突的方法</h2><p>基本思想：有冲突就去寻找下一个空的散列地址。</p>
-<h3 id="开放地址法"><a href="#开放地址法" class="headerlink" title="开放地址法"></a>开放地址法</h3><p>Hi=(H(key)+di)MOD m i=1,2,…,k (k&lt;=m-1)<br>其中di是一个偏移量序列<br><strong>三种取法</strong>：   </p>
-<ol>
-<li>di=1,2,3,…,m-1    线性探测法</li>
-<li>d1=i^2,-i^2,2^2,-2^2…..q^2  二次探测法</li>
-<li>伪随机探测法<h3 id="链地址法"><a href="#链地址法" class="headerlink" title="链地址法"></a>链地址法</h3>基本思想：将相同的散列地址的记录链成一单链表<br>步骤：</li>
-<li>根据散列函数 计算出散列值。若该地址对应的链表为空，则将该元素插入此链表；</li>
-<li>如果已经有了，就可以使用头插法和尾插法插在链表。<br>优点：<br>非同义词不会冲突</li>
-</ol>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">其他</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/09/散列表哈希函数/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/09/10/排序基础内容/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          排序基础内容
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/09/06/动态查找表/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">动态查找表</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -374,9 +232,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
