@@ -178,6 +178,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+        <h2 id="什么是生命周期"><a href="#什么是生命周期" class="headerlink" title="什么是生命周期"></a>什么是生命周期</h2><p>生命周期就是一个对象从创建到销毁的一个过程。对于人来说，人的生命周期大致包括为出生、成长、死亡。对于Java对象来说，一个对象也包含着从创建到回收的过程。对于Vue来说同样有着这样的一个过程。</p>
+        
+          <a class="article-more-a" href="/2020/08/26/Vue生命周期/#more">more >></a>
         
       
 
@@ -186,6 +189,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -942,7 +956,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="引入Vue-CDN"><a href="#引入Vue-CDN" class="headerlink" title="引入Vue CDN"></a>引入Vue CDN</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+        <h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p>渐进式：被设计成自底向上逐层应用</p>
+<p>底：Vue核心模块、Axios模块、Router模块</p>
+<p>顶：具体的业务模块，比如说登录模块。。。</p>
+<h2 id="引入Vue-CDN"><a href="#引入Vue-CDN" class="headerlink" title="引入Vue CDN"></a>引入Vue CDN</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
 <h2 id="Vue对象的创建与盒子之间的绑定"><a href="#Vue对象的创建与盒子之间的绑定" class="headerlink" title="Vue对象的创建与盒子之间的绑定"></a>Vue对象的创建与盒子之间的绑定</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span>              //与下方Vue对象绑定</span><br><span class="line">&#123;&#123;message&#125;&#125;                 //取Vue对象的数据 显示hello world</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">   <span class="keyword">var</span> vm=<span class="keyword">new</span> Vue(&#123; 		<span class="comment">//创建Vue对象</span></span></span><br><span class="line">   el:#app,                 //用来绑定盒子</span><br><span class="line"><span class="javascript">   data&#123;				    <span class="comment">//数据域</span></span></span><br><span class="line"><span class="javascript">	   message:<span class="string">'hello world'</span></span></span><br><span class="line">   &#125;</span><br><span class="line">   &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
         
@@ -1122,7 +1139,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JSP</a>
+                <a href="javascript:void(0)" class="js-tag color3">其他</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1130,7 +1147,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">其他</a>
+                <a href="javascript:void(0)" class="js-tag color4">Markdown的使用方法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1138,7 +1155,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown的使用方法</a>
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">JSP</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1150,15 +1171,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1170,11 +1183,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">高等数学</a>
+                <a href="javascript:void(0)" class="js-tag color5">游戏攻略</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">游戏攻略</a>
+                <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">高等数学</a>
               </li>
              
               <li class="article-tag-list-item">
