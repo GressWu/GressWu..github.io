@@ -60,7 +60,7 @@
 			</ul>
 
 		</nav>
-		<a>Total Articles:39</a>
+		<a>Total Articles:40</a>
 		<nav class="header-smart-menu">
     		
     			
@@ -157,6 +157,81 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-Vue组件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/05/Vue组件/">Vue组件</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/05/Vue组件/" class="archive-article-date">
+  	<time datetime="2020-09-05T07:43:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="组件基础"><a href="#组件基础" class="headerlink" title="组件基础"></a>组件基础</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 这是View  现在就是templet模板--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 这里是根组件的templet模板 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">abar</span>&gt;</span><span class="tag">&lt;/<span class="name">abar</span>&gt;</span> </span><br><span class="line">        <span class="comment">&lt;!-- &lt;abar&gt;&lt;/abar&gt;放在根组件的child中，就是根组件的child --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">bbar</span>&gt;</span><span class="tag">&lt;/<span class="name">bbar</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="comment">// 全局定义（注册）组件</span></span></span><br><span class="line">        Vue.component</span><br><span class="line">        (   </span><br><span class="line"><span class="javascript">            <span class="string">'abar'</span>,</span></span><br><span class="line">            &#123;</span><br><span class="line">                template:`</span><br><span class="line"><span class="xml">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'background:yellow'</span>&gt;</span>                                </span></span><br><span class="line">                        【公共root组件的child组件：abar组件】</span><br><span class="line"><span class="xml">                        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">'ccc'</span>&gt;</span>确定<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">                        <span class="tag">&lt;<span class="name">child</span>&gt;</span><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span></span><br><span class="line"><span class="xml">                        <span class="tag">&lt;<span class="name">abar_child</span>&gt;</span><span class="tag">&lt;/<span class="name">abar_child</span>&gt;</span></span></span><br><span class="line"><span class="xml">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span>`,</span></span><br><span class="line"><span class="javascript">                    <span class="comment">//必须使用一个根节点，且只能有一个根节点</span></span></span><br><span class="line"><span class="javascript">                data()  <span class="comment">// 坑！ 注意这里的data写法，不能写属性</span></span></span><br><span class="line">                &#123;</span><br><span class="line"><span class="javascript">                    <span class="keyword">return</span> &#123; <span class="attr">abarname</span>:<span class="string">"abarname"</span>&#125;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                methods: </span><br><span class="line">                &#123;</span><br><span class="line">                    ccc()</span><br><span class="line">                    &#123;</span><br><span class="line"><span class="javascript">                        alert(<span class="string">'abar'</span>);</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;,</span><br><span class="line"><span class="javascript">                <span class="comment">// 样式要单文件组件的写法才可实现</span></span></span><br><span class="line"><span class="javascript">                components: <span class="comment">// 局部定义（注册）组件</span></span></span><br><span class="line">                &#123;</span><br><span class="line">                    abar_child:</span><br><span class="line">                    &#123;</span><br><span class="line"><span class="xml">                        template:`<span class="tag">&lt;<span class="name">div</span>&gt;</span>【abar_child组件，只能在abar组件中使用】<span class="tag">&lt;/<span class="name">div</span>&gt;</span>`</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        Vue.component</span><br><span class="line">        (   </span><br><span class="line"><span class="javascript">            <span class="string">'child'</span>,</span></span><br><span class="line">            &#123;</span><br><span class="line"><span class="xml">                template: `<span class="tag">&lt;<span class="name">div</span>&gt;</span>【公共child组件】<span class="tag">&lt;/<span class="name">div</span>&gt;</span>`</span></span><br><span class="line">            &#125;</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        Vue.component</span><br><span class="line">        (   </span><br><span class="line"><span class="javascript">            <span class="string">'bbar'</span>,</span></span><br><span class="line">            &#123;</span><br><span class="line">                template: `</span><br><span class="line"><span class="xml">                        <span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line">                            【与abar的同级兄弟组件：bbar组件】</span><br><span class="line"><span class="xml">                            <span class="tag">&lt;<span class="name">child</span>&gt;</span><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span></span><br><span class="line"><span class="xml">                        <span class="tag">&lt;/<span class="name">div</span>&gt;</span>`</span></span><br><span class="line">            &#125;</span><br><span class="line">        )</span><br><span class="line"><span class="javascript">        <span class="comment">// 组件注意事项：</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">// 1、必须一个根节点（root element），只要与内部标签不冲突。</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">// 2、组件间可通过props进行通讯</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">// 3、组件可以有多个属性，但是data属性的写法必须是方法+返回值</span></span></span><br><span class="line">        </span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue <span class="comment">// 这里new实例后，就自动创建root组件（根组件）</span></span></span><br><span class="line">        (</span><br><span class="line">            &#123;</span><br><span class="line"><span class="javascript">                el: <span class="string">'#app'</span>, </span></span><br><span class="line">            &#125;</span><br><span class="line">        )</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="父子传参"><a href="#父子传参" class="headerlink" title="父子传参"></a>父子传参</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/05/Vue组件/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-Vue生命周期" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -936,87 +1011,6 @@
 
 
   
-    <article id="post-Vue相关知识" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/02/Vue相关知识/">Vue基础知识</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/02/Vue相关知识/" class="archive-article-date">
-  	<time datetime="2020-08-02T13:02:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p>渐进式：被设计成自底向上逐层应用</p>
-<p>底：Vue核心模块、Axios模块、Router模块</p>
-<p>顶：具体的业务模块，比如说登录模块。。。</p>
-<h2 id="引入Vue-CDN"><a href="#引入Vue-CDN" class="headerlink" title="引入Vue CDN"></a>引入Vue CDN</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Vue对象的创建与盒子之间的绑定"><a href="#Vue对象的创建与盒子之间的绑定" class="headerlink" title="Vue对象的创建与盒子之间的绑定"></a>Vue对象的创建与盒子之间的绑定</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span>              //与下方Vue对象绑定</span><br><span class="line">&#123;&#123;message&#125;&#125;                 //取Vue对象的数据 显示hello world</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">   <span class="keyword">var</span> vm=<span class="keyword">new</span> Vue(&#123; 		<span class="comment">//创建Vue对象</span></span></span><br><span class="line">   el:#app,                 //用来绑定盒子</span><br><span class="line"><span class="javascript">   data&#123;				    <span class="comment">//数据域</span></span></span><br><span class="line"><span class="javascript">	   message:<span class="string">'hello world'</span></span></span><br><span class="line">   &#125;</span><br><span class="line">   &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/08/02/Vue相关知识/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/02/Vue相关知识/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1135,7 +1129,7 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">English Learning</a>
+                <a href="javascript:void(0)" class="js-tag color1">Git与Github</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1143,11 +1137,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Git与Github</a>
+                <a href="javascript:void(0)" class="js-tag color4">JSP</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown的使用方法</a>
+                <a href="javascript:void(0)" class="js-tag color2">English Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1155,11 +1149,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color4">Markdown的使用方法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JSP</a>
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1171,11 +1165,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1183,19 +1177,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">游戏攻略</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">高等数学</a>
+                <a href="javascript:void(0)" class="js-tag color5">游戏攻略</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">设计</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">高等数学</a>
               </li>
              
               <li class="article-tag-list-item">
