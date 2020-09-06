@@ -6,22 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Vue生命周期 | Viva La Vida</title>
+  <title>vue slot插槽用法 | Viva La Vida</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是生命周期生命周期就是一个对象从创建到销毁的一个过程。对于人来说，人的生命周期大致包括为出生、成长、死亡。对于Java对象来说，一个对象也包含着从创建到回收的过程。对于Vue来说同样有着这样的一个过程。">
-<meta name="keywords" content="Vue">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Vue生命周期">
-<meta property="og:url" content="http://yoursite.com/2020/08/26/Vue生命周期/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="vue slot插槽用法">
+<meta property="og:url" content="http://yoursite.com/2020/09/06/vue-slot插槽用法/index.html">
 <meta property="og:site_name" content="Viva La Vida">
-<meta property="og:description" content="什么是生命周期生命周期就是一个对象从创建到销毁的一个过程。对于人来说，人的生命周期大致包括为出生、成长、死亡。对于Java对象来说，一个对象也包含着从创建到回收的过程。对于Vue来说同样有着这样的一个过程。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://cn.vuejs.org/images/lifecycle.png">
-<meta property="og:updated_time" content="2020-09-05T09:36:57.281Z">
+<meta property="og:updated_time" content="2020-09-06T04:53:20.409Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue生命周期">
-<meta name="twitter:description" content="什么是生命周期生命周期就是一个对象从创建到销毁的一个过程。对于人来说，人的生命周期大致包括为出生、成长、死亡。对于Java对象来说，一个对象也包含着从创建到回收的过程。对于Vue来说同样有着这样的一个过程。">
-<meta name="twitter:image" content="https://cn.vuejs.org/images/lifecycle.png">
+<meta name="twitter:title" content="vue slot插槽用法">
   
     <link rel="alternative" href="/atom.xml" title="Viva La Vida" type="application/atom+xml">
   
@@ -163,66 +157,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Vue生命周期" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-vue-slot插槽用法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Vue生命周期
+      vue slot插槽用法
     </h1>
   
 
         
-        <a href="/2020/08/26/Vue生命周期/" class="archive-article-date">
-  	<time datetime="2020-08-26T01:03:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-26</time>
+        <a href="/2020/09/06/vue-slot插槽用法/" class="archive-article-date">
+  	<time datetime="2020-09-06T04:53:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="什么是生命周期"><a href="#什么是生命周期" class="headerlink" title="什么是生命周期"></a>什么是生命周期</h2><p>生命周期就是一个对象从创建到销毁的一个过程。对于人来说，人的生命周期大致包括为出生、成长、死亡。对于Java对象来说，一个对象也包含着从创建到回收的过程。对于Vue来说同样有着这样的一个过程。</p>
-<a id="more"></a>
-
-<h2 id="Vue生命周期图示"><a href="#Vue生命周期图示" class="headerlink" title="Vue生命周期图示"></a>Vue生命周期图示</h2><img src="https://cn.vuejs.org/images/lifecycle.png" style="zoom:50%;">
-
-<h2 id="Vue的八个生命周期"><a href="#Vue的八个生命周期" class="headerlink" title="Vue的八个生命周期"></a>Vue的八个生命周期</h2><p>八个生命周期钩子函数分别如下：</p>
-<ul>
-<li>beforeCreate</li>
-</ul>
-<p>表示实例完全被创建出来之前，会执行它，此时data和method数据与方法还未初始化。在这里是不能调用method方法或者取不到data中的数据</p>
-<ul>
-<li>created</li>
-</ul>
-<p>data与methods方法已经被初始化好了，如果要操作method中的方法或者是操作data中的数据最早只能在create中进行操作</p>
-<ul>
-<li>beforeMount</li>
-</ul>
-<p>模板在内存中编译完成，但是尚未把数据模板渲染到页，还不可以获取到dom元素</p>
-<ul>
-<li>mounted</li>
-</ul>
-<p>表示内存中的模板已经真实的挂载在了页面上，用户已经可以看到渲染后的页面了。同时表明，要操作dom元素至少要在挂载完成后</p>
-<p><strong>注：</strong>mounted是实例创建的最后一个生命周期，此时如果没有其他操作，这个实例就会待在内存中，不发生改变</p>
-<ul>
-<li>beforeUpdate</li>
-</ul>
-<p>运行时的事件，数据没有更新，页面已经更新了</p>
-<ul>
-<li>updated</li>
-</ul>
-<p>页面、数据同步更新</p>
-<ul>
-<li>beforeDestory</li>
-</ul>
-<p>销毁之前</p>
-<ul>
-<li>dedstoryed</li>
-</ul>
-<p>完成销毁</p>
-
+        
       
 
       
@@ -251,17 +206,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -312,7 +256,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/26/Vue生命周期/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/09/06/vue-slot插槽用法/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -326,18 +270,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/09/05/Vue组件/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Vue组件
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/08/23/enum枚举类/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">enum枚举类</div>
+    <a href="/2020/09/05/Vue脚手架项目结构/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Vue脚手架项目简介</div>
       <i class="icon-circle-right"></i>
     </a>
   
