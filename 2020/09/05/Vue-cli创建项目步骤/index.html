@@ -6,20 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>图的一些总结 | Viva La Vida</title>
+  <title>Vue-cli创建项目 | Viva La Vida</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="若一个无向图有n个顶点和n-1条边，可以使它连通，但是没有环（生成树）。如再加一条边，如果不考虑重边的情况下，则必然有环。 有向图的邻接表存储结构，顶点v在边表中出现的次数与顶点v的入度有关。 假设有n个顶点，e条边，删除与某个顶点相关联的所有边的复杂度为O(n+e)。">
-<meta name="keywords" content="数据结构">
+  <meta name="description" content="步骤以创建一个hello-world项目为例 0.事前准备 1npm install-g cnpm --registry=https://registry.npm.taobao.org  1npm config set registry https://registry.npm.taobao.org  设置淘宝源，这样会快非常多，否则搭建一个Vue脚手架工程，等着会心脏骤停。">
+<meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="图的一些总结">
-<meta property="og:url" content="http://yoursite.com/2019/09/03/图的一些总结/index.html">
+<meta property="og:title" content="Vue-cli创建项目">
+<meta property="og:url" content="http://yoursite.com/2020/09/05/Vue-cli创建项目步骤/index.html">
 <meta property="og:site_name" content="Viva La Vida">
-<meta property="og:description" content="若一个无向图有n个顶点和n-1条边，可以使它连通，但是没有环（生成树）。如再加一条边，如果不考虑重边的情况下，则必然有环。 有向图的邻接表存储结构，顶点v在边表中出现的次数与顶点v的入度有关。 假设有n个顶点，e条边，删除与某个顶点相关联的所有边的复杂度为O(n+e)。">
+<meta property="og:description" content="步骤以创建一个hello-world项目为例 0.事前准备 1npm install-g cnpm --registry=https://registry.npm.taobao.org  1npm config set registry https://registry.npm.taobao.org  设置淘宝源，这样会快非常多，否则搭建一个Vue脚手架工程，等着会心脏骤停。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-19T08:05:46.747Z">
+<meta property="og:image" content="c:%5CUsers%5C11629%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200905203843189.png">
+<meta property="og:image" content="c:%5CUsers%5C11629%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200905214536192.png">
+<meta property="og:image" content="c:%5CUsers%5C11629%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200905214820793.png">
+<meta property="og:image" content="c:%5CUsers%5C11629%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200905214952573.png">
+<meta property="og:image" content="c:%5CUsers%5C11629%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200905215210428.png">
+<meta property="og:image" content="c:%5CUsers%5C11629%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200905215448902.png">
+<meta property="og:image" content="c:%5CUsers%5C11629%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200905215613925.png">
+<meta property="og:image" content="c:%5CUsers%5C11629%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200905215756586.png">
+<meta property="og:updated_time" content="2020-09-05T14:00:54.478Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="图的一些总结">
-<meta name="twitter:description" content="若一个无向图有n个顶点和n-1条边，可以使它连通，但是没有环（生成树）。如再加一条边，如果不考虑重边的情况下，则必然有环。 有向图的邻接表存储结构，顶点v在边表中出现的次数与顶点v的入度有关。 假设有n个顶点，e条边，删除与某个顶点相关联的所有边的复杂度为O(n+e)。">
+<meta name="twitter:title" content="Vue-cli创建项目">
+<meta name="twitter:description" content="步骤以创建一个hello-world项目为例 0.事前准备 1npm install-g cnpm --registry=https://registry.npm.taobao.org  1npm config set registry https://registry.npm.taobao.org  设置淘宝源，这样会快非常多，否则搭建一个Vue脚手架工程，等着会心脏骤停。">
+<meta name="twitter:image" content="c:%5CUsers%5C11629%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200905203843189.png">
   
     <link rel="alternative" href="/atom.xml" title="Viva La Vida" type="application/atom+xml">
   
@@ -161,46 +170,66 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-图的一些总结" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Vue-cli创建项目步骤" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      图的一些总结
+      Vue-cli创建项目
     </h1>
   
 
         
-        <a href="/2019/09/03/图的一些总结/" class="archive-article-date">
-  	<time datetime="2019-09-03T09:06:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
+        <a href="/2020/09/05/Vue-cli创建项目步骤/" class="archive-article-date">
+  	<time datetime="2020-09-05T12:05:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-<ol>
-<li>若一个无向图有n个顶点和n-1条边，可以使它连通，但是没有环（生成树）。如再加一条边，如果不考虑重边的情况下，则必然有环。</li>
-<li>有向图的邻接表存储结构，顶点v在边表中出现的次数与顶点v的入度有关。</li>
-<li>假设有n个顶点，e条边，删除与某个顶点相关联的所有边的复杂度为O(n+e)。<a id="more"></a></li>
-<li>设图G的邻接矩阵为A，A^n记做为矩阵B，B[i][j]的值表现为顶点i到顶点j长度为n的路径一共是该点的值。</li>
-<li>关于图的<strong>广度优先遍历</strong>（BFS算法），使用辅助数组标志顶点是否被访问过，使用队列进行遍历（利用先进先出的特性，与树的层次遍历相像）。队非空时，则队头元素出队且入队刚才队头元素的相邻接元素。</li>
-<li>图的<strong>邻接矩阵</strong>是唯一的，但是<strong>邻接表</strong>若输入边的次序不同，生成的邻接表也不同。因此，基于<strong>邻接矩阵</strong> DFS序列和BFS序列是<strong>唯一</strong>的，基于<strong>邻接表</strong>的BFS与DFS序列<strong>不唯一</strong>。</li>
-<li>对于DFS序列来说，连通图–&gt;深度优先生成树 ，否则深度优先生成森林。</li>
-<li>可以通过图的遍历算法判断图的<strong>连通性</strong> 对于<strong>无向图</strong>从<strong>任意</strong>一个节点出发仅需一次就能遍历所有顶点，那么该顶点则是连通的。对于<strong>有向图</strong>从<strong>起始点</strong>到图中每个顶点都有路径，则连通的。</li>
-<li>对于<strong>无向图</strong>，调用BFS与DFS的次数为该图连通分量的次数。</li>
-<li>对于一个有n个顶点、e条边的图采用<strong>邻接表</strong>，不论是用DFS遍历还是用BFS遍历，<strong>空间复杂度</strong>都是O(n),<strong>时间复杂度</strong>都是O(n+e)。</li>
-<li>对于一个有n个顶点、e条边的图采用<strong>邻接矩阵</strong>，不论是用DFS遍历还是用BFS遍历，<strong>空间复杂度</strong>都是O(n),<strong>时间复杂度</strong>都是O($n^2$)。</li>
-<li>判断有向图是否存在回路，除了用拓扑排序外，还可以利用深度优先遍历算法。</li>
-<li>使用DFS算法递归一个无环有向图，退出递归输出的相应顶点，这样的顶点序列是拓扑排序。</li>
-<li>图的广度优先生成树高度&lt;=深度优先生成树  因为广度优先遍历可以解决单源最短路径问题，生成树高度最低。</li>
-<li>连通分量只存在于非连通图，强连通分量只存在于非强连通图。    ——–这分别是极大连通子图与极小连通子图。</li>
-<li>一个连通图的生成树是极小连通图</li>
-<li>如果一个有n个顶点，e条边或弧的图 满足以下关系<br>e= $\frac {1} {2}\sum_{i}^{n} {TD(vi)}$</li>
-</ol>
+        <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>以创建一个hello-world项目为例</p>
+<p><strong>0.事前准备</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install-g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>设置淘宝源，这样会快非常多，否则搭建一个Vue脚手架工程，等着会心脏骤停。</p>
+<a id="more"></a>
+
+<p><strong>1.创建项目</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue create hello-world</span><br></pre></td></tr></table></figure>
+
+<p>这时会提示:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Vue CLI v4.4.6</span><br><span class="line">? Please pick a preset: (Use arrow keys)</span><br><span class="line"><span class="meta">&gt;</span> default (babel, eslint)</span><br><span class="line">  Manually select features</span><br></pre></td></tr></table></figure>
+
+<p>选择default默认配置</p>
+<p><strong>2.创建成功后执行以下命令</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">�🚀  Successfully created project hello-world.</span><br><span class="line">�📦  Get started with the following commands:</span><br><span class="line"></span><br><span class="line"><span class="meta"> $</span> cd hello-world</span><br><span class="line"><span class="meta"> $</span> npm run serve</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:%5CUsers%5C11629%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200905203843189.png" alt="image-20200905203843189"></p>
+<p>项目创建成功，ctrl+右键打开项目</p>
+<p><strong>3.打包生成前端项目</strong></p>
+<p>在本文件中生成dist文件夹，存放着Vue打包生成的html,css,js</p>
+<h2 id="可视化创建项目"><a href="#可视化创建项目" class="headerlink" title="可视化创建项目"></a>可视化创建项目</h2><p><strong>0.创建项目</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue ui</span><br></pre></td></tr></table></figure>
+
+<p>0.1 自动跳转页面</p>
+<p><img src="C:%5CUsers%5C11629%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200905214536192.png" alt="image-20200905214536192"></p>
+<p>0.2 选择Vue项目管理器</p>
+<p><img src="C:%5CUsers%5C11629%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200905214820793.png" alt="image-20200905214820793"></p>
+<p>0.3 选择创建新项目</p>
+<p><img src="C:%5CUsers%5C11629%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200905214952573.png" alt="image-20200905214952573"></p>
+<p>0.4 创建</p>
+<p><img src="C:%5CUsers%5C11629%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200905215210428.png" alt="image-20200905215210428"></p>
+<p>0.5 选择手动</p>
+<p><img src="C:%5CUsers%5C11629%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200905215448902.png" alt="image-20200905215448902"></p>
+<p>0.6 开始创建</p>
+<p><img src="C:%5CUsers%5C11629%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200905215613925.png" alt="image-20200905215613925"></p>
+<p>0.7 创建成功</p>
+<p><img src="C:%5CUsers%5C11629%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200905215756586.png" alt="image-20200905215756586"></p>
 
       
 
@@ -235,7 +264,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
         		</li>
       		
 		</ul>
@@ -291,7 +320,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/03/图的一些总结/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/09/05/Vue-cli创建项目步骤/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -305,18 +334,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/06/动态查找表/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/09/05/Vue脚手架项目结构/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          动态查找表
+          Vue脚手架项目简介
         
       </div>
     </a>
   
   
-    <a href="/2019/09/03/线性表的查找/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">线性表的查找</div>
+    <a href="/2020/09/05/Vue组件/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Vue组件</div>
       <i class="icon-circle-right"></i>
     </a>
   

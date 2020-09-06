@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>图的一些总结 | Viva La Vida</title>
+  <title>Archives | Viva La Vida</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="若一个无向图有n个顶点和n-1条边，可以使它连通，但是没有环（生成树）。如再加一条边，如果不考虑重边的情况下，则必然有环。 有向图的邻接表存储结构，顶点v在边表中出现的次数与顶点v的入度有关。 假设有n个顶点，e条边，删除与某个顶点相关联的所有边的复杂度为O(n+e)。">
-<meta name="keywords" content="数据结构">
-<meta property="og:type" content="article">
-<meta property="og:title" content="图的一些总结">
-<meta property="og:url" content="http://yoursite.com/2019/09/03/图的一些总结/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Viva La Vida">
+<meta property="og:url" content="http://yoursite.com/archives/page/5/index.html">
 <meta property="og:site_name" content="Viva La Vida">
-<meta property="og:description" content="若一个无向图有n个顶点和n-1条边，可以使它连通，但是没有环（生成树）。如再加一条边，如果不考虑重边的情况下，则必然有环。 有向图的邻接表存储结构，顶点v在边表中出现的次数与顶点v的入度有关。 假设有n个顶点，e条边，删除与某个顶点相关联的所有边的复杂度为O(n+e)。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-19T08:05:46.747Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="图的一些总结">
-<meta name="twitter:description" content="若一个无向图有n个顶点和n-1条边，可以使它连通，但是没有环（生成树）。如再加一条边，如果不考虑重边的情况下，则必然有环。 有向图的邻接表存储结构，顶点v在边表中出现的次数与顶点v的入度有关。 假设有n个顶点，e条边，删除与某个顶点相关联的所有边的复杂度为O(n+e)。">
+<meta name="twitter:title" content="Viva La Vida">
   
     <link rel="alternative" href="/atom.xml" title="Viva La Vida" type="application/atom+xml">
   
@@ -161,194 +156,90 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-图的一些总结" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      图的一些总结
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/08/27/Words/" class="archive-article-date">
+  	<time datetime="2019-08-27T02:06:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-27</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/08/27/Words/">Words</a>
     </h1>
   
 
-        
-        <a href="/2019/09/03/图的一些总结/" class="archive-article-date">
-  	<time datetime="2019-09-03T09:06:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-<ol>
-<li>若一个无向图有n个顶点和n-1条边，可以使它连通，但是没有环（生成树）。如再加一条边，如果不考虑重边的情况下，则必然有环。</li>
-<li>有向图的邻接表存储结构，顶点v在边表中出现的次数与顶点v的入度有关。</li>
-<li>假设有n个顶点，e条边，删除与某个顶点相关联的所有边的复杂度为O(n+e)。<a id="more"></a></li>
-<li>设图G的邻接矩阵为A，A^n记做为矩阵B，B[i][j]的值表现为顶点i到顶点j长度为n的路径一共是该点的值。</li>
-<li>关于图的<strong>广度优先遍历</strong>（BFS算法），使用辅助数组标志顶点是否被访问过，使用队列进行遍历（利用先进先出的特性，与树的层次遍历相像）。队非空时，则队头元素出队且入队刚才队头元素的相邻接元素。</li>
-<li>图的<strong>邻接矩阵</strong>是唯一的，但是<strong>邻接表</strong>若输入边的次序不同，生成的邻接表也不同。因此，基于<strong>邻接矩阵</strong> DFS序列和BFS序列是<strong>唯一</strong>的，基于<strong>邻接表</strong>的BFS与DFS序列<strong>不唯一</strong>。</li>
-<li>对于DFS序列来说，连通图–&gt;深度优先生成树 ，否则深度优先生成森林。</li>
-<li>可以通过图的遍历算法判断图的<strong>连通性</strong> 对于<strong>无向图</strong>从<strong>任意</strong>一个节点出发仅需一次就能遍历所有顶点，那么该顶点则是连通的。对于<strong>有向图</strong>从<strong>起始点</strong>到图中每个顶点都有路径，则连通的。</li>
-<li>对于<strong>无向图</strong>，调用BFS与DFS的次数为该图连通分量的次数。</li>
-<li>对于一个有n个顶点、e条边的图采用<strong>邻接表</strong>，不论是用DFS遍历还是用BFS遍历，<strong>空间复杂度</strong>都是O(n),<strong>时间复杂度</strong>都是O(n+e)。</li>
-<li>对于一个有n个顶点、e条边的图采用<strong>邻接矩阵</strong>，不论是用DFS遍历还是用BFS遍历，<strong>空间复杂度</strong>都是O(n),<strong>时间复杂度</strong>都是O($n^2$)。</li>
-<li>判断有向图是否存在回路，除了用拓扑排序外，还可以利用深度优先遍历算法。</li>
-<li>使用DFS算法递归一个无环有向图，退出递归输出的相应顶点，这样的顶点序列是拓扑排序。</li>
-<li>图的广度优先生成树高度&lt;=深度优先生成树  因为广度优先遍历可以解决单源最短路径问题，生成树高度最低。</li>
-<li>连通分量只存在于非连通图，强连通分量只存在于非强连通图。    ——–这分别是极大连通子图与极小连通子图。</li>
-<li>一个连通图的生成树是极小连通图</li>
-<li>如果一个有n个顶点，e条边或弧的图 满足以下关系<br>e= $\frac {1} {2}\sum_{i}^{n} {TD(vi)}$</li>
-</ol>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">English learning</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/03/图的一些总结/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
-<nav id="article-nav">
-  
-    <a href="/2019/09/06/动态查找表/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          动态查找表
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2019/09/03/线性表的查找/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">线性表的查找</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/08/27/hello-world/" class="archive-article-date">
+  	<time datetime="2019-08-26T16:45:38.666Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-27</time>
+</a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
+    	 
   
-  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/08/27/hello-world/">Hello World</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
   
 
-  
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/page/4/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><span class="page-number current">5</span>
+    </nav>
   
 
 
@@ -372,8 +263,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
